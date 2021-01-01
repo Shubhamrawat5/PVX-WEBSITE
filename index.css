@@ -135,6 +135,11 @@
    background-color: #21222b;
  }
 
+ .admin-box:hover {
+   transform: scale(1.03);
+   transition: 0.2s;
+ }
+
  .admin-dp {
    width: 80px;
    border-radius: 50%;
