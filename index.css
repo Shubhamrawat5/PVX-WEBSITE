@@ -148,3 +148,7 @@
  footer {
    margin: 2.5rem auto 1rem auto;
  }
+
+.dev-name{
+  display: none;
+}
