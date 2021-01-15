@@ -39,6 +39,10 @@
    font-size: 18px;
  }
 
+ .groups{
+   display: inline-block;
+ }
+
  @media (max-width:500px) {
    #logo {
      width: 150px;
@@ -62,9 +66,9 @@
 
  .app-heading {
    font-weight: 400;
-   background-color: #0c151a36;
+   background-color: #17191f;
    width: 90%;
-   height: 28px;
+   height: 30px;
    margin: 3rem auto 0.5rem auto;
    border-radius: 5px;
  }
@@ -74,7 +78,7 @@
    padding: 20px 10px 0;
    background-color: #0c151a36;
    box-shadow: 6px 6px 10px -3px #101010;
-   height: 250px;
+   height: 245px;
    width: 220px;
    border-radius: 10px
  }
@@ -88,7 +92,6 @@
    display: inline-flex;
    flex-flow: wrap;
    justify-content: center;
-   width: 95%;
  }
 
  .group-dp {
