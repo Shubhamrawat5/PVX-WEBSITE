@@ -60,7 +60,7 @@
  .section-heading {
    font-weight: 500;
    font-size: 32px;
-   margin: 3rem 0 0;
+margin: 2rem 10px;
    text-decoration: underline;
  }
 
@@ -69,7 +69,7 @@
    background-color: #17191f;
    width: 90%;
    height: 30px;
-   margin: 3rem auto 0.5rem auto;
+   margin: 2rem auto 0.5rem auto;
    border-radius: 5px;
  }
 
@@ -116,26 +116,45 @@
    display: contents;
  }
 
- #admin-section {
-   background-color: #131419;
-       margin-top: 3rem;
+ #achieve-section{
+  background-color: #131419;
+  margin-top: 1rem;
+      width: 100%;
  }
 
-#admin-section .section-heading{
-  margin-top:1rem;
+.achieve-container{
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#admin-section .group-container{
-  margin: 1rem 0 2rem 0;
-}
+ .achieve-box {
+   display: inline-block;
+   margin-bottom: 2.5rem;
+   padding: 13px;
+   padding-bottom: 0;
+   box-shadow: 4px 4px 5px -3px #3d3f4a;
+   border-radius: 6px;
+   background-color: #21222b;
+ }
+
+ @media (max-width:700px) {
+  .achieve-box{
+    margin: 0 20px 2.5rem 20px;
+  }
+  .achieve-box img{
+    width: 85vw;
+    padding: 12px 0 0 ;
+  }
+ }
 
  .admin-box {
    margin: 10px;
    padding: 10px;
    padding-bottom: 0;
-   box-shadow: 4px 4px 5px -3px #3d3f4a;
    border-radius: 10px;
-   background-color: #21222b;
+   background-color: #0c151a36;
+   box-shadow: 6px 6px 10px -3px #101010;
  }
 
  .admin-box:hover {
