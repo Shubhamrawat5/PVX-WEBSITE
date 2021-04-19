@@ -73,7 +73,7 @@ header {
   border-radius: 5px;
 }
 
-.wa {
+.card {
   margin: 20px;
   padding: 20px 10px 5px 10px;
   background-color: #0c151a36;
@@ -84,7 +84,7 @@ header {
   overflow: hidden;
 }
 
-.wa:hover {
+.card:hover {
   transform: scale(1.03);
   transition: 0.2s;
 }
@@ -149,7 +149,7 @@ a {
     width: 85vw;
     padding: 12px 0 0;
   }
-  .wa {
+  .card {
     margin: 15px;
     height: 240px;
     width: 200px;
@@ -201,7 +201,7 @@ footer {
   .admin-name {
     font-size: 14px;
   }
-  .wa {
+  .card {
     height: 200px;
     width: 150px;
     margin: 15px 10px;
