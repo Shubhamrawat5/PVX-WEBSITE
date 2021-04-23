@@ -1,9 +1,13 @@
+* {
+  scroll-behavior: smooth !important;
+}
+
 :root {
-  --color-secondary: rgb(249 240 250);
-  --color-primary: #efece6;
+  --color-secondary: rgb(248, 248, 248);
+  --color-primary: white;
   --color-text: black;
-  --color-card: #8bc3e136;
-  --color-card-shadow: #c0ccf4;
+  --color-card: rgb(248, 248, 248);
+  --color-card-shadow: rgb(0 0 0 / 15%) 0px 5px 10px;
   --color-nav: #ffffffde;
 }
 .dark {
@@ -11,7 +15,7 @@
   --color-secondary: #21222b;
   --color-text: white;
   --color-card: #0c151a36;
-  --color-card-shadow: #101010;
+  --color-card-shadow: 6px 6px 10px -3px #101010;
   --color-nav: #1a0202de;
 }
 
@@ -34,6 +38,7 @@ nav {
   position: fixed;
   z-index: 1;
   background: var(--color-nav);
+  box-shadow: rgb(0 0 0 / 5%) 0px 5px 10px;
 }
 
 .nav-item-container {
@@ -46,6 +51,11 @@ nav {
   display: inline;
   margin: 0;
   font-weight: 400;
+}
+
+.nav-heading:hover {
+  transform: rotate(-10deg) scale(1.1);
+  transition: 1s;
 }
 
 li {
@@ -158,7 +168,7 @@ a {
   margin: 20px;
   padding: 20px 10px 5px 10px;
   background-color: var(--color-card);
-  box-shadow: 6px 6px 10px -3px var(--color-card-shadow);
+  box-shadow: var(--color-card-shadow);
   height: 240px;
   width: 220px;
   border-radius: 10px;
@@ -238,8 +248,8 @@ a {
   padding: 10px;
   padding-bottom: 0;
   border-radius: 10px;
-  background-color: #0c151a36;
-  box-shadow: 6px 6px 10px -3px #101010;
+  background-color: var(--color-card);
+  box-shadow: var(--color-card-shadow);
 }
 
 .admin-box:hover {
