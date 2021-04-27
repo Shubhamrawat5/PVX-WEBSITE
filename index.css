@@ -9,6 +9,7 @@
   --color-card: rgb(248, 248, 248);
   --color-card-shadow: rgb(0 0 0 / 15%) 0px 5px 10px;
   --color-nav: #ffffffde;
+  --filter: none;
 }
 .dark {
   --color-primary: #0c151a;
@@ -17,6 +18,7 @@
   --color-card: #0c151a36;
   --color-card-shadow: 6px 6px 10px -3px #101010;
   --color-nav: #1a0202de;
+  --filter: invert(1);
 }
 
 body {
@@ -28,6 +30,7 @@ body {
   letter-spacing: 0.5px;
 }
 
+/*================== NAV BAR ====================*/
 nav {
   display: inline-flex;
   width: 100%;
@@ -46,14 +49,13 @@ nav {
   align-items: center;
 }
 
-.nav-heading {
-  font-size: 25px;
-  display: inline;
+.nav-logo {
   margin: 0;
-  font-weight: 400;
+  width: 80px;
+  filter: var(--filter);
 }
 
-.nav-heading:hover {
+.nav-logo:hover {
   transform: rotate(-10deg) scale(1.1);
   transition: 1s;
 }
@@ -87,6 +89,7 @@ li:hover {
   width: 25px;
 }
 
+/*================== HEADER ====================*/
 header {
   width: 100%;
   height: 100vh;
@@ -124,10 +127,7 @@ a {
   font-size: 18px;
 }
 
-.groups {
-  display: inline-block;
-}
-
+/*=============== MEDIA QUERY: 500PX ================*/
 @media (max-width: 500px) {
   nav {
     position: static;
@@ -146,6 +146,11 @@ a {
   #header-section p {
     font-size: 14px;
   }
+}
+
+/*================= GROUP SECTION ==================*/
+.groups {
+  display: inline-block;
 }
 
 .section-heading {
@@ -203,6 +208,7 @@ a {
   margin-bottom: 0;
 }
 
+/*=========== ACHIEVE SECTION ===========*/
 #achieve-section {
   background-color: var(--color-primary);
   margin-top: 1rem;
@@ -243,6 +249,7 @@ a {
   }
 }
 
+/*======== ADMIN SECTION =======*/
 .admin-box {
   margin: 10px;
   padding: 10px;
