@@ -1,18 +1,23 @@
+* {
+  box-sizing: border-box;
+}
 body {
+  margin: 0;
   background-size: auto;
   background-image: url("https://thumbs.dreamstime.com/b/high-tech-eco-green-infinity-computer-technology-concept-backgro-background-32595794.jpg");
+  text-align: center;
 }
-.container {
-  display: flex;
+.months-container {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
 }
 .card {
   position: relative;
-  top: 50px;
   display: inline;
-  width: 400px;
-  margin-left: 20px;
-  /* overflow: visible; */
-
+  margin: 40px 15px 15px 15px;
   border-radius: 2px 2px 8px 8px;
   box-shadow: 2px 2px 12px 2px black;
 }
@@ -20,40 +25,33 @@ body {
 .content-table {
   margin: 0%;
   border-collapse: collapse;
-  /* margin: 25px 0; */
   font-size: 20px;
-  min-width: 400px;
-  /* border-radius: 20px 20px 0 0; */
-  /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); */
 }
-th {
-  /* padding: 12px 2px 2px 2px; */
-  /* height: 100px; */
-}
+
 header {
   background-color: #1e024b;
   color: white;
-  font-size: 60px;
+  font-size: 46px;
   text-align: center;
+  padding: 15px 0;
 }
 
 .month {
   background-color: #feae96;
   background-image: linear-gradient(315deg, #feae96 0%, #fe0944 74%);
-
   color: #ffffff;
   text-align: center;
-  padding: 15px;
-  font-size: 30px;
+  padding: 10px;
+  font-size: 27px;
   font-family: "Roboto", sans-serif;
   font-weight: bolder;
   position: absolute;
-  left: 74px;
   top: -34px;
+  left: 50%;
+  transform: translateX(-75px);
   border: 1px solid rgba(0, 0, 0, 0.329);
-  width: 220px;
+  width: 150px;
   border-radius: 15px;
-  /* height: 10px; */
 }
 .month2 {
   background: linear-gradient(to right, #019d13 0%, #879e93 100%);
@@ -62,33 +60,32 @@ header {
   background: linear-gradient(to right, #03019d 0%, #969aa6 100%);
 }
 
-.content-table thead tr {
+.content-table thead {
   background-color: #ee9617;
   background-image: linear-gradient(315deg, #e4b573 0%, #fe5858 74%);
-
   color: #ffffff;
   text-align: center;
   font-family: "Roboto";
-  /* font-weight: bold; */
 }
 .td {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-.month2-tr thead tr {
+.month2-tr thead {
   background: linear-gradient(to right, #54c060 0%, #60cc60 100%);
 }
-.month3-tr thead tr {
+.month3-tr thead {
   background-color: #2a2a72;
   background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
 }
 
 .content-table th {
-  padding: 49px 0px 15px 0px;
+  padding: 30px 10px 10px 10px;
+  width: 25%;
 }
 .content-table td {
-  padding: 15px 1px 2px 12px;
+  padding: 9px 6px 9px 6px;
 }
 
 .content-table tbody tr {
@@ -99,11 +96,29 @@ header {
   background-color: #eeeaeab7;
 }
 
-.content-table tbody tr:last-of-type {
-  border-bottom: 2px solid #009879;
-}
-
-.content-table tbody tr.active-row {
-  font-weight: bold;
-  color: #009879;
+@media (max-width: 500px) {
+  header {
+    font-size: 30px;
+  }
+  .month {
+    font-size: 22px;
+    padding: 6px;
+    top: -28px;
+  }
+  .months-container {
+    padding: 0 15px;
+  }
+  .content-table th {
+    padding: 20px 3px 6px 3px;
+    font-size: 18px;
+    width: 10%;
+  }
+  .content-table td {
+    font-size: 17px;
+    padding: 10px 3px 10px 3px;
+  }
+  .card {
+    width: 100%;
+    margin: 40px 0px 15px 0px;
+  }
 }
