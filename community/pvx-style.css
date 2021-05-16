@@ -33,9 +33,20 @@ body {
 header {
   background-color: #1e024b;
   color: white;
-  font-size: 46px;
   text-align: center;
   padding: 15px 0;
+}
+
+h1 {
+  font-size: 45px;
+  font-weight: 500;
+  margin: 0px 0 15px 0;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 40px;
+  margin: 10px 0 0 0;
 }
 
 .month {
@@ -87,7 +98,7 @@ header {
   width: 140px;
 }
 .content-table td {
-  padding: 9px 6px 9px 6px;
+  padding: 9px 6px 7px 6px;
   word-break: break-word;
   text-transform: capitalize;
 }
@@ -109,11 +120,24 @@ footer {
   color: white;
   padding: 16px 0 10px 0;
   margin-top: 1rem;
+  font-size: 20px;
+}
+
+@media (max-width: 700px) {
+  h1 {
+    font-size: calc(1rem + 4vw);
+  }
+  h2 {
+    font-size: calc(1rem + 3vw);
+  }
 }
 
 @media (max-width: 500px) {
-  header {
-    font-size: 30px;
+  h1 {
+    font-size: calc(1rem + 3vw);
+  }
+  h2 {
+    font-size: 27px;
   }
   .month {
     font-size: 22px;
@@ -134,5 +158,8 @@ footer {
   .card {
     width: 100%;
     margin: 40px 0px 15px 0px;
+  }
+  footer {
+    font-size: 18px;
   }
 }

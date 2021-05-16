@@ -15,13 +15,13 @@ const months = [
 ];
 
 function getData(data) {
-  console.log(data);
+  // console.log(data);
 
   data.forEach((item) => {
     const { name, username, date, month, place } = item;
 
     let monthBody = months[month - 1] + "-body"; //in html tbody
-    console.log(monthBody);
+    // console.log(monthBody);
 
     document.getElementById(monthBody).innerHTML += `<tr> 
     <td>${date}</td>
