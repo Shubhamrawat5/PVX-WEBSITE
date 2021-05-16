@@ -34,11 +34,11 @@ header {
   background-color: #1e024b;
   color: white;
   text-align: center;
-  padding: 15px 0;
+  padding: 10px 0 15px 0;
 }
 
 h1 {
-  font-size: 45px;
+  font-size: 44px;
   font-weight: 500;
   margin: 0px 0 15px 0;
 }
