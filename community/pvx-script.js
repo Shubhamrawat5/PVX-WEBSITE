@@ -25,9 +25,9 @@ function getData(data) {
 
     document.getElementById(monthBody).innerHTML += `<tr> 
     <td>${date}</td>
-    <td>${name}</td>
-    <td>${username}</td>
-    <td>${place}</td>
+    <td>${name.toLowerCase()}</td>
+    <td>${username.toLowerCase()}</td>
+    <td>${place.toLowerCase()}</td>
     </tr>
     `;
   });

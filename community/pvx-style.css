@@ -20,6 +20,7 @@ body {
   margin: 40px 15px 15px 15px;
   border-radius: 2px 2px 8px 8px;
   box-shadow: 2px 2px 12px 2px black;
+  width: 450px;
 }
 
 .content-table {
@@ -82,10 +83,12 @@ header {
 
 .content-table th {
   padding: 30px 10px 10px 10px;
-  width: 25%;
+  width: 140px;
 }
 .content-table td {
   padding: 9px 6px 9px 6px;
+  word-break: break-word;
+  text-transform: capitalize;
 }
 
 .content-table tbody tr {
@@ -94,6 +97,10 @@ header {
 
 .content-table tbody tr:nth-of-type(even) {
   background-color: #eeeaeab7;
+}
+
+.date {
+  width: 30px !important;
 }
 
 @media (max-width: 500px) {
@@ -111,7 +118,6 @@ header {
   .content-table th {
     padding: 20px 3px 6px 3px;
     font-size: 18px;
-    width: 10%;
   }
   .content-table td {
     font-size: 17px;
