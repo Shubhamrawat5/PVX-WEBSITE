@@ -6,8 +6,47 @@ body {
   background-size: auto;
   background-image: url("https://thumbs.dreamstime.com/b/high-tech-eco-green-infinity-computer-technology-concept-backgro-background-32595794.jpg");
   text-align: center;
+
   font-family: "Newsreader", serif;
 }
+.wish {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: url("/community/diwali.gif");
+  /* height: 150px; */
+  /* background-color: #54c060; */
+  width: 100%;
+
+  /* background-size: cover; */
+}
+
+.happy-birthday {
+  /* font-family: "Concert One", cursive; */
+  font-family: "Pacifico", cursive;
+  text-shadow: 5px 4px 9px rgb(44, 37, 146);
+
+  color: #fdfdfd;
+  font-size: 60px;
+}
+
+.bdy-boy {
+  /* background: url("https://i.gifer.com/W9k1.gif"); */
+  font-size: 70px;
+  color: #c4c70cf1;
+  font-family: "Pacifico", cursive;
+  text-shadow: 5px 4px 9px red;
+  animation: infinite o;
+}
+.gif {
+  /* display: inline-flex; */
+  background: url("/community/cake.gif");
+  width: 180px;
+  height: 180px;
+  background-size: cover;
+}
+
 .months-container {
   display: inline-flex;
   flex-wrap: wrap;
@@ -22,6 +61,11 @@ body {
   border-radius: 2px 2px 8px 8px;
   box-shadow: 2px 2px 12px 2px black;
   width: 450px;
+}
+.balloon {
+  /* position: absolute; */
+  width: 80px;
+  /* height: 120px; */
 }
 
 .content-table {
@@ -129,6 +173,19 @@ footer {
   }
   h2 {
     font-size: calc(1rem + 3vw);
+  }
+  .happy-birthday {
+    font-size: 32px;
+  }
+  .bdy-boy {
+    font-size: 40px;
+  }
+  .balloon {
+    display: none;
+  }
+  .gif {
+    width: 120px;
+    height: 120px;
   }
 }
 
