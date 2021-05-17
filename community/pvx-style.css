@@ -13,7 +13,7 @@ body {
   position: relative;
   justify-content: center;
   align-items: center;
-  background: url("/community/diwali.gif");
+  background: url("diwali.gif");
   width: 100%;
   overflow: hidden;
   display: none;
@@ -44,7 +44,7 @@ body {
   font-weight: 400;
 }
 .gif {
-  background: url("/community/cake.gif");
+  background: url("cake.gif");
   width: 135px;
   height: 135px;
   background-size: contain;
