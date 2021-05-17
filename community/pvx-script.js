@@ -15,10 +15,21 @@ const months = [
 ];
 
 function getData(data) {
+  //get today date & month
+  const d = new Date();
+  const todayDate = d.getDate();
+  const todayMonth = d.getMonth() + 1; //0 to 11
   // console.log(data);
 
   data.forEach((item) => {
     const { name, username, date, month, place } = item;
+
+    if (todayDate === date && todayMonth === month) {
+      console.log(`TODAY IS ${name} Birthday`);
+
+      document.querySelector(".wish").classList.add("show");
+      document.querySelector(".bdy-boy").textContent = name;
+    }
 
     let monthBody = months[month - 1] + "-body"; //in html tbody
     // console.log(monthBody);

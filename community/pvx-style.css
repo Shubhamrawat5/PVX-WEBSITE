@@ -11,40 +11,62 @@ body {
 }
 .wish {
   position: relative;
-  display: inline-flex;
   justify-content: center;
   align-items: center;
   background: url("/community/diwali.gif");
-  /* height: 150px; */
-  /* background-color: #54c060; */
   width: 100%;
+  overflow: hidden;
+  display: none;
+}
 
-  /* background-size: cover; */
+.show {
+  display: inline-flex;
 }
 
 .happy-birthday {
-  /* font-family: "Concert One", cursive; */
-  font-family: "Pacifico", cursive;
+  font-family: "Satisfy", cursive;
   text-shadow: 5px 4px 9px rgb(44, 37, 146);
-
+  margin: 0;
   color: #fdfdfd;
-  font-size: 60px;
+  font-weight: 400;
+  font-size: 46px;
+  position: relative;
+  top: 7px;
 }
 
 .bdy-boy {
-  /* background: url("https://i.gifer.com/W9k1.gif"); */
-  font-size: 70px;
+  font-size: 55px;
   color: #c4c70cf1;
-  font-family: "Pacifico", cursive;
-  text-shadow: 5px 4px 9px red;
+  font-family: "Satisfy", cursive;
+  text-shadow: 5px 4px 5px red;
+  margin: 0;
   animation: infinite o;
+  font-weight: 400;
 }
 .gif {
-  /* display: inline-flex; */
   background: url("/community/cake.gif");
-  width: 180px;
-  height: 180px;
-  background-size: cover;
+  width: 135px;
+  height: 135px;
+  background-size: contain;
+}
+.balloon {
+  width: 50px;
+  margin: 0 20px;
+  animation: down_up 3.5s infinite;
+  transform: translateY(130px);
+}
+
+.balloon2 {
+  animation-delay: 1s;
+}
+
+@keyframes down_up {
+  0% {
+  }
+  100% {
+    display: inline;
+    transform: translateY(-130px);
+  }
 }
 
 .months-container {
@@ -61,11 +83,6 @@ body {
   border-radius: 2px 2px 8px 8px;
   box-shadow: 2px 2px 12px 2px black;
   width: 450px;
-}
-.balloon {
-  /* position: absolute; */
-  width: 80px;
-  /* height: 120px; */
 }
 
 .content-table {
@@ -175,17 +192,20 @@ footer {
     font-size: calc(1rem + 3vw);
   }
   .happy-birthday {
-    font-size: 32px;
+    font-size: 42px;
   }
   .bdy-boy {
-    font-size: 40px;
+    font-size: 50px;
   }
   .balloon {
+    width: 46px;
+  }
+  .balloon2 {
     display: none;
   }
   .gif {
-    width: 120px;
-    height: 120px;
+    width: 90px;
+    height: 90px;
   }
 }
 
@@ -195,6 +215,19 @@ footer {
   }
   h2 {
     font-size: 27px;
+  }
+  .happy-birthday {
+    font-size: 36px;
+    z-index: 1;
+  }
+  .bdy-boy {
+    font-size: 40px;
+    z-index: 1;
+  }
+  .balloon {
+    z-index: 0;
+    position: absolute;
+    right: 0;
   }
   .month {
     font-size: 22px;
