@@ -26,9 +26,12 @@ function getData(data) {
 
     if (todayDate === date && todayMonth === month) {
       console.log(`TODAY IS ${name} Birthday`);
-
       document.querySelector(".wish").classList.add("show");
-      document.querySelector(".bdy-boy").textContent = name;
+
+      // check if multiple member bday or not
+      if (document.querySelector(".bdy-boy").textContent == "")
+        document.querySelector(".bdy-boy").textContent = name;
+      else document.querySelector(".bdy-boy").textContent += " & " + name;
     }
 
     let monthBody = months[month - 1] + "-body"; //in html tbody
@@ -44,6 +47,7 @@ function getData(data) {
   });
 }
 
+// FOR TESTING..
 const temp = [
   {
     name: "Shubham Rawat",
@@ -63,8 +67,8 @@ const temp = [
   {
     name: "Patel Bhargav",
     username: "unnamed boi pvx",
-    date: 1,
-    month: 6,
+    date: 20,
+    month: 5,
     place: "Ahmedabad",
   },
   {
@@ -84,23 +88,23 @@ const temp = [
   {
     name: "VISHAL",
     username: "STORMBREAKER",
-    date: 26,
-    month: 12,
+    date: 20,
+    month: 5,
     place: "Mumbai",
   },
   {
     name: "Upanshu nimbulkar",
     username: "USN-2k",
-    date: 30,
-    month: 3,
+    date: 20,
+    month: 5,
     place: "Nagpur",
   },
   {
-    name: "Nischay Sharma",
-    username: "Nischay",
-    date: 22,
-    month: 6,
-    place: "New Delhi",
+    name: "Seth Adarsh Jain Ataari",
+    username: "Sethadarshjainataari",
+    date: 20,
+    month: 1,
+    place: "Ashoknagar M.P.",
   },
   {
     name: "Karan Singh",
@@ -117,22 +121,3 @@ fetch(url)
   .then((data) => {
     getData(data.data);
   });
-
-/* ---------------------------------- AJAX ---------------------------------- */
-// const xhr = new XMLHttpRequest();
-// xhr.open("GET", url);
-
-// xhr.onprogress = function () {
-//   console.log("ON PROGRESS");
-// };
-
-// xhr.onload = function () {
-//   console.log("ON LOAD");
-// };
-
-// xhr.onreadystatechange = function () {
-//   console.log("ON READY STATE CHANGE");
-//   console.log(xhr.readyState);
-// };
-
-// xhr.send();

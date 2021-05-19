@@ -42,12 +42,14 @@ body {
   margin: 0;
   animation: infinite o;
   font-weight: 400;
+  text-transform: capitalize;
 }
 .gif {
   background: url("cake.gif");
   width: 135px;
   height: 135px;
   background-size: contain;
+  background-repeat: no-repeat;
 }
 .balloon {
   width: 50px;
@@ -190,6 +192,9 @@ footer {
   }
   h2 {
     font-size: calc(1rem + 3vw);
+  }
+  .today-bday-text {
+    width: 80%;
   }
   .happy-birthday {
     font-size: 42px;
