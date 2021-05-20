@@ -37,7 +37,6 @@ nav {
   width: 100%;
   align-items: center;
   justify-content: space-between;
-
   padding: 5px 20px;
   position: fixed;
   z-index: 1;
@@ -106,6 +105,8 @@ header {
 }
 
 #logo {
+  border: 5px solid var(--color-text);
+  padding: 5px;
   width: 250px;
   border-radius: 50%;
 }
@@ -311,7 +312,7 @@ footer {
 /*=============== MEDIA QUERY: 500PX ================*/
 @media (max-width: 500px) {
   nav {
-    position: static;
+    /* position: static; */
   }
   li {
     display: none;
@@ -321,7 +322,9 @@ footer {
     display: block;
   }
   #logo {
-    width: 150px;
+    width: 160px;
+    border: 3px solid var(--color-text);
+    padding: 3px;
   }
 
   .heading {
