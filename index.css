@@ -1,5 +1,6 @@
 * {
   scroll-behavior: smooth !important;
+  box-sizing: border-box;
 }
 
 :root {
@@ -15,18 +16,18 @@
   --color-primary: #0c151a;
   --color-secondary: #21222b;
   --color-text: white;
-  --color-card: #0c151a36;
+  --color-card: #21222b;
   --color-card-shadow: 6px 6px 10px -3px #101010;
   --color-nav: #1a0202de;
   --filter: invert(1);
 }
 
 body {
+  background-color: var(--color-primary);
   text-align: center;
   margin: 0;
   font-family: "Roboto Slab", serif;
   color: var(--color-text);
-  background-color: var(--color-secondary);
   letter-spacing: 0.5px;
 }
 
@@ -36,7 +37,7 @@ nav {
   width: 100%;
   align-items: center;
   justify-content: space-between;
-  box-sizing: border-box;
+
   padding: 5px 20px;
   position: fixed;
   z-index: 1;
@@ -89,6 +90,9 @@ li:hover {
   width: 25px;
 }
 
+section {
+  padding: 20px 20px 5px 20px;
+}
 /*================== HEADER ====================*/
 header {
   width: 100%;
@@ -127,27 +131,6 @@ a {
   font-size: 18px;
 }
 
-/*=============== MEDIA QUERY: 500PX ================*/
-@media (max-width: 500px) {
-  nav {
-    position: static;
-  }
-  li {
-    display: none;
-  }
-  #logo {
-    width: 150px;
-  }
-
-  .heading {
-    font-size: 26px;
-  }
-
-  #header-section p {
-    font-size: 14px;
-  }
-}
-
 /*================= GROUP SECTION ==================*/
 .groups {
   display: inline-block;
@@ -156,7 +139,7 @@ a {
 .section-heading {
   font-weight: 500;
   font-size: 30px;
-  margin: 2rem 10px;
+  margin: 0 10px 2rem 10px;
   text-decoration: underline;
 }
 
@@ -174,7 +157,7 @@ a {
   padding: 20px 10px 5px 10px;
   background-color: var(--color-card);
   box-shadow: var(--color-card-shadow);
-  height: 240px;
+  height: 255px;
   width: 220px;
   border-radius: 10px;
   overflow: hidden;
@@ -208,9 +191,44 @@ a {
   margin-bottom: 0;
 }
 
+/*============ DRIVE SECTION ============*/
+.drive-container {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+.drive-subheading {
+}
+.drive-img {
+  width: 50%;
+  max-width: 460px;
+  filter: brightness(1.5);
+}
+.drive-text {
+  width: 50%;
+  max-width: 500px;
+  padding: 0 20px;
+}
+.drive-text a {
+  color: blue;
+}
+@media (max-width: 900px) {
+  .drive-container {
+    flex-direction: column;
+  }
+  .drive-img {
+    width: 100%;
+  }
+  .drive-text {
+    width: 100%;
+    max-width: 460px;
+    padding: 0;
+  }
+}
+
 /*=========== ACHIEVE SECTION ===========*/
 #achieve-section {
-  background-color: var(--color-primary);
   margin-top: 1rem;
   width: 100%;
 }
@@ -228,30 +246,12 @@ a {
   padding-bottom: 0;
   box-shadow: 4px 4px 5px -3px #3d3f4a;
   border-radius: 6px;
-  background-color: var(--color-secondary);
-}
-
-@media (max-width: 700px) {
-  .achieve-box {
-    margin: 0 20px 2.5rem 20px;
-  }
-  .achieve-box img {
-    width: 85vw;
-    padding: 12px 0 0;
-  }
-  .card {
-    margin: 15px;
-    height: 240px;
-    width: 200px;
-  }
-  .group-info {
-    margin-top: 10px;
-  }
+  background-color: var(--color-primary);
 }
 
 /*======== ADMIN SECTION =======*/
 .admin-box {
-  margin: 10px;
+  margin: 5px;
   padding: 10px;
   padding-bottom: 0;
   border-radius: 10px;
@@ -270,14 +270,67 @@ a {
 }
 
 footer {
-  margin: 2.5rem auto 1rem auto;
+  padding: 18px 0 14px 0;
 }
 
 .dev-name {
   display: none;
 }
 
+/*=============== MEDIA QUERY: 700PX ================*/
+@media (max-width: 700px) {
+  .section {
+    padding: 15px 15px 5px 15px;
+  }
+  .drive-container {
+    width: 100%;
+    padding: 0 15px;
+  }
+  .drive-img {
+    width: 100%;
+  }
+  .drive-text {
+    margin: 25px 15px;
+  }
+  .achieve-box {
+  }
+  .achieve-box img {
+    width: 85vw;
+    padding: 12px 0 0;
+  }
+  .card {
+    margin: 15px;
+    height: 258px;
+    width: 200px;
+  }
+  .group-info {
+    margin-top: 10px;
+  }
+}
+
+/*=============== MEDIA QUERY: 500PX ================*/
 @media (max-width: 500px) {
+  nav {
+    position: static;
+  }
+  li {
+    display: none;
+    margin: 0 12px 0 3px;
+  }
+  .imp-li {
+    display: block;
+  }
+  #logo {
+    width: 150px;
+  }
+
+  .heading {
+    font-size: 26px;
+  }
+
+  #header-section p {
+    font-size: 14px;
+  }
   .section-heading {
     font-size: 25px;
   }
@@ -293,8 +346,39 @@ footer {
     font-size: 14px;
   }
   .card {
-    height: 200px;
+    height: 225px;
     width: 150px;
     margin: 15px 10px;
   }
+  .admin-box {
+    margin: 6px;
+  }
+}
+
+@media (max-width: 380px) {
+  nav {
+    padding: 5px 8px;
+  }
+  .card {
+    height: 215px;
+    width: 130px;
+    margin: 12px 6px;
+  }
+  .group-dp {
+    width: 95px;
+  }
+  .group-name,
+  .admin-name {
+    margin: 10px 0px 5px;
+  }
+  .admin-dp {
+    width: 72px;
+  }
+}
+
+.section:nth-child(2n) {
+  background-color: var(--color-primary);
+}
+.section:nth-child(2n + 1) {
+  background-color: var(--color-secondary);
 }
