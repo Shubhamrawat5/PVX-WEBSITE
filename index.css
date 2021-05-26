@@ -1,5 +1,9 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 2.5rem;
+}
+
 * {
-  scroll-behavior: smooth !important;
   box-sizing: border-box;
 }
 
