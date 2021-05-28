@@ -1,3 +1,4 @@
+/* ----------------------------- FOR DARK THEME ----------------------------- */
 let themeMode = document.querySelector(".theme-mode-container");
 
 themeMode.addEventListener("click", changeTheme);
@@ -10,3 +11,19 @@ function changeTheme() {
     currentThemeMode.setAttribute("src", "images/light.svg");
   else currentThemeMode.setAttribute("src", "images/moon.svg");
 }
+
+/* -------------------- FOR ADDING WA GROUP LINKS IN HTML -------------------- */
+
+const url = "http://pvxgroup.herokuapp.com/api/links";
+function setGroupLinks(data) {
+  console.log(data);
+  data.forEach((grp) => {
+    document.getElementById("wa-" + grp.name).setAttribute("href", grp.link);
+  });
+}
+
+fetch(url)
+  .then((res) => res.json())
+  .then((data) => {
+    setGroupLinks(data);
+  });

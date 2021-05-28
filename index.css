@@ -181,6 +181,7 @@ a {
 
 .group-dp {
   width: 140px;
+  height: 140px;
   border-radius: 50%;
 }
 
@@ -271,6 +272,7 @@ a {
 
 .admin-dp {
   width: 80px;
+  height: 82px;
   border-radius: 50%;
 }
 
@@ -343,6 +345,7 @@ footer {
   }
   .group-dp {
     width: 105px;
+    height: 105px;
   }
   .group-info {
     margin-top: 10px;
@@ -373,6 +376,7 @@ footer {
   }
   .group-dp {
     width: 95px;
+    height: 95px;
   }
   .group-name,
   .admin-name {
@@ -380,6 +384,7 @@ footer {
   }
   .admin-dp {
     width: 72px;
+    height: 74px;
   }
 }
 

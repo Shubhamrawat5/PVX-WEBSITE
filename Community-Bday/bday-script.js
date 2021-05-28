@@ -1,4 +1,4 @@
-const url = "https://pvx-bday.herokuapp.com/api";
+const url = "https://pvxgroup.herokuapp.com/api/bday";
 const months = [
   "january",
   "february",
@@ -91,13 +91,6 @@ const temp = [
     date: 20,
     month: 5,
     place: "Mumbai",
-  },
-  {
-    name: "Upanshu nimbulkar",
-    username: "USN-2k",
-    date: 20,
-    month: 5,
-    place: "Nagpur",
   },
   {
     name: "Seth Adarsh Jain Ataari",
