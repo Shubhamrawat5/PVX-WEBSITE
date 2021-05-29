@@ -14,7 +14,7 @@ function changeTheme() {
 
 /* -------------------- FOR ADDING WA GROUP LINKS IN HTML -------------------- */
 
-const url = "http://pvxgroup.herokuapp.com/api/links";
+const url = "https://pvxgroup.herokuapp.com/api/links";
 function setGroupLinks(data) {
   console.log(data);
   data.forEach((grp) => {
