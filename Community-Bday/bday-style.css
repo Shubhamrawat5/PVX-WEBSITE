@@ -30,6 +30,14 @@ a:hover {
   display: inline-flex;
 }
 
+.err {
+  border: 1px solid #1e024b;
+  margin: 3px 4px;
+  padding: 3px 8px;
+  font-family: monospace;
+  font-size: 16px;
+}
+
 .happy-birthday {
   font-family: "Satisfy", cursive;
   text-shadow: 5px 4px 9px rgb(44, 37, 146);
@@ -108,7 +116,7 @@ header {
 }
 
 h1 {
-  font-size: 44px;
+  font-size: 42px;
   font-weight: 500;
   margin: 0px 0 15px 0;
 }
@@ -222,6 +230,9 @@ footer {
 }
 
 @media (max-width: 500px) {
+  .err {
+    font-size: 14px;
+  }
   h1 {
     font-size: calc(1rem + 3vw);
   }

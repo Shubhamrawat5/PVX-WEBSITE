@@ -96,6 +96,14 @@ li:hover {
 section {
   padding: 20px 20px 5px 20px;
 }
+
+.err {
+  border: 1px solid var(--color-text);
+  padding: 3px 8px;
+  font-family: monospace;
+  font-size: 14px;
+}
+
 /*================== HEADER ====================*/
 header {
   width: 100%;
@@ -317,6 +325,9 @@ footer {
 
 /*=============== MEDIA QUERY: 500PX ================*/
 @media (max-width: 500px) {
+  .err {
+    font-size: 12px;
+  }
   nav {
     /* position: static; */
   }

@@ -109,8 +109,17 @@ const temp = [
 ];
 // getData(temp);
 
+function showErr() {
+  console.log("Error with showing group links!");
+  const errElement = document.getElementById("err");
+  errElement.innerHTML =
+    "<strong>NOTE: </strong>There is a problem with attaching the B'Day data ! Contact PVX admins.";
+  errElement.classList.add("err");
+}
+
 fetch(url)
   .then((res) => res.json())
   .then((data) => {
     getData(data.data);
-  });
+  })
+  .catch((err) => showErr());
