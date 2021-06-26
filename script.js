@@ -15,8 +15,9 @@ function changeTheme() {
 /* -------------------- FOR ADDING WA GROUP LINKS IN HTML -------------------- */
 
 const url = "https://pvxgroup.herokuapp.com/api/links";
+const urlBackup = "https://pvxgroupbackup.herokuapp.com/api/links";
 function setGroupLinks(data) {
-  console.log(data);
+  // console.log(data);
   data.forEach((grp) => {
     document.getElementById("wa-" + grp.name).setAttribute("href", grp.link);
   });
@@ -35,4 +36,13 @@ fetch(url)
   .then((data) => {
     setGroupLinks(data);
   })
-  .catch((err) => showErr());
+  .catch((err) => {
+    //error in main url, now trying backup url
+    console.log("Error in main url, trying backup url");
+    fetch(urlBackup)
+      .then((res) => res.json())
+      .then((data) => {
+        setGroupLinks(data);
+      })
+      .catch((err) => showErr());
+  });

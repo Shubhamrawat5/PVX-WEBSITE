@@ -1,4 +1,5 @@
 const url = "https://pvxgroup.herokuapp.com/api/bday";
+const urlBackup = "https://pvxgroupbackup.herokuapp.com/api/bday";
 const months = [
   "january",
   "february",
@@ -14,7 +15,7 @@ const months = [
   "december",
 ];
 
-function getData(data) {
+function setData(data) {
   //get today date & month
   const d = new Date();
   const todayDate = d.getDate();
@@ -120,6 +121,15 @@ function showErr() {
 fetch(url)
   .then((res) => res.json())
   .then((data) => {
-    getData(data.data);
+    setData(data.data);
   })
-  .catch((err) => showErr());
+  .catch((err) => {
+    //error in main url, now trying backup url
+    console.log("Error in main url, trying backup url");
+    fetch(urlBackup)
+      .then((res) => res.json())
+      .then((data) => {
+        setData(data.data);
+      })
+      .catch((err) => showErr());
+  });
