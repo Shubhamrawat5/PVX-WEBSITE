@@ -23,26 +23,42 @@ function setGroupLinks(data) {
   });
 }
 
-function showErr() {
-  console.log("Error with showing group links!");
+function showErr(msg) {
   const errElement = document.getElementById("err");
-  errElement.innerHTML =
-    "<strong>NOTE: </strong>There is a problem with attaching the group links ! Contact PVX admins.";
-  errElement.classList.add("err");
+  errElement.innerHTML = msg;
+  // errElement.classList.add("err");
+}
+function removeErr(msg) {
+  const errElement = document.getElementById("err");
+  errElement.innerHTML = msg;
+  errElement.classList.remove("err");
 }
 
 fetch(url)
   .then((res) => res.json())
   .then((data) => {
     setGroupLinks(data);
+    showErr("group links added!");
+    setTimeout(() => {
+      removeErr("");
+    }, 2000);
   })
   .catch((err) => {
     //error in main url, now trying backup url
     console.log("Error in main url, trying backup url");
+    showErr("problem with main url, trying backup url");
     fetch(urlBackup)
       .then((res) => res.json())
       .then((data) => {
         setGroupLinks(data);
+        showErr("group links added!");
+        setTimeout(() => {
+          removeErr("");
+        }, 2000);
       })
-      .catch((err) => showErr());
+      .catch((err) =>
+        showErr(
+          "<strong>NOTE: </strong>There is a problem with attaching the B'Day data ! Contact PVX admins."
+        )
+      );
   });
