@@ -83,6 +83,7 @@ li:hover {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  display: none;
 }
 
 .theme-mode-container:hover {
@@ -114,6 +115,8 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: url("./images/6.gif");
+  background-position: center;
 }
 
 #logo {
@@ -145,6 +148,11 @@ a {
 }
 
 /*================= GROUP SECTION ==================*/
+#group-section {
+  background-image: url("./images/1.gif");
+  background-position: center;
+}
+
 .groups {
   display: inline-block;
 }
