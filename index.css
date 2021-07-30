@@ -134,13 +134,13 @@ a {
 /*================= GROUP SECTION ==================*/
 #group-section,
 #admin-section {
-  background-image: url("./images/1.gif");
+  background-image: url("./images/22.gif");
   background-position: center;
 }
 
 #drive-section,
 #achieve-section {
-  background-image: url("./images/6.gif");
+  /* background-image: url("./images/6.gif"); */
   background-position: center;
 }
 
@@ -162,6 +162,7 @@ a {
   height: 30px;
   margin: 2rem auto 0.5rem auto;
   border-radius: 5px;
+  border: 1px solid aliceblue;
 }
 
 .card {
@@ -169,11 +170,19 @@ a {
   padding: 20px 10px 5px 10px;
   background-color: #231e1f;
   background-color: #231e1fb3;
+  background-color: #231e1f69;
   box-shadow: 6px 6px 10px -3px #101010;
   height: 255px;
   width: 220px;
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
+}
+.card,
+.admin-box {
+  border: 2px solid darkred;
+  box-shadow: 1px 1px 5px -4px #e02e19;
+  /* background-image: url("./images/22.gif"); */
+  background-position: center;
 }
 
 .card:hover {
