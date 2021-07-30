@@ -7,33 +7,12 @@ html {
   box-sizing: border-box;
 }
 
-:root {
-  --color-secondary: rgb(248, 248, 248);
-  --color-primary: white;
-  --color-text: black;
-  --color-card: rgb(248, 248, 248);
-  --color-card-shadow: rgb(0 0 0 / 15%) 0px 5px 10px;
-  --color-nav: #ffffffde;
-  --filter: none;
-}
-.dark {
-  --color-primary: #0c151a;
-  --color-secondary: #221d1e;
-  --color-text: white;
-  --color-card: #231e1f;
-  --color-card-shadow: 6px 6px 10px -3px #101010;
-  /* --color-card-shadow: 2px 2px 10px -4px #fdfdfd; */
-  /* --color-card-shadow: 0px 0px 4px 0px #fdfdfd; */
-  --color-nav: #1a0202de;
-  --filter: invert(1);
-}
-
 body {
-  background-color: var(--color-primary);
+  background-color: #0c151a;
   text-align: center;
   margin: 0;
   font-family: "Roboto Slab", serif;
-  color: var(--color-text);
+  color: white;
   letter-spacing: 0.5px;
 }
 
@@ -46,7 +25,7 @@ nav {
   padding: 5px 20px;
   position: fixed;
   z-index: 1;
-  background: var(--color-nav);
+  background: #1a0202de;
   box-shadow: rgb(0 0 0 / 5%) 0px 5px 10px;
 }
 
@@ -58,7 +37,7 @@ nav {
 .nav-logo {
   margin: 0;
   width: 80px;
-  filter: var(--filter);
+  filter: invert(1);
 }
 
 .nav-logo:hover {
@@ -101,7 +80,7 @@ section {
 }
 
 .err {
-  border: 1px solid var(--color-text);
+  border: 1px solid white;
   padding: 3px 8px;
   font-family: monospace;
   font-size: 14px;
@@ -111,7 +90,7 @@ section {
 header {
   width: 100%;
   height: 100vh;
-  background-color: var(--color-primary);
+  background-color: #0c151a;
   background-image: url(images/bg-stars.svg);
   display: inline-flex;
   flex-direction: column;
@@ -122,7 +101,7 @@ header {
 }
 
 #logo {
-  /* border: 3.5px solid var(--color-text); */
+  /* border: 3.5px solid white; */
   background-image: url(./images/10.gif);
   background-position: center;
   background-size: 300px;
@@ -137,7 +116,7 @@ header {
 }
 a {
   text-decoration: none;
-  color: var(--color-text);
+  color: white;
   cursor: pointer;
   display: contents;
 }
@@ -178,7 +157,7 @@ a {
 
 .app-heading {
   font-weight: 400;
-  background-color: var(--color-primary);
+  background-color: #0c151a;
   width: 90%;
   height: 30px;
   margin: 2rem auto 0.5rem auto;
@@ -188,9 +167,9 @@ a {
 .card {
   margin: 20px;
   padding: 20px 10px 5px 10px;
-  background-color: var(--color-card);
+  background-color: #231e1f;
   background-color: #231e1fb3;
-  box-shadow: var(--color-card-shadow);
+  box-shadow: 6px 6px 10px -3px #101010;
   height: 255px;
   width: 220px;
   border-radius: 8px;
@@ -281,7 +260,7 @@ a {
   padding-bottom: 0;
   box-shadow: 4px 4px 5px -3px #3d3f4a;
   border-radius: 6px;
-  background-color: var(--color-primary);
+  background-color: #0c151a;
   background-color: #0c151a73;
 }
 
@@ -291,10 +270,10 @@ a {
   padding: 10px;
   padding-bottom: 0;
   border-radius: 10px;
-  background-color: var(--color-card);
+  background-color: #231e1f;
   background-color: #231e1fb3;
 
-  box-shadow: var(--color-card-shadow);
+  box-shadow: 6px 6px 10px -3px #101010;
 }
 
 .admin-box:hover {
@@ -365,7 +344,7 @@ footer {
   #logo {
     width: 160px;
     background-size: 182px;
-    /* border: 3px solid var(--color-text); */
+    /* border: 3px solid white; */
     /* padding: 3px; */
   }
 
@@ -431,8 +410,8 @@ footer {
 }
 
 .section:nth-child(2n) {
-  background-color: var(--color-primary);
+  background-color: #0c151a;
 }
 .section:nth-child(2n + 1) {
-  background-color: var(--color-secondary);
+  background-color: #221d1e;
 }
