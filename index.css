@@ -41,7 +41,6 @@ nav {
 }
 
 .nav-logo:hover {
-  /* transform: rotate(-10deg) scale(1.1); */
   transition: 1s;
 }
 
@@ -105,7 +104,6 @@ header {
 }
 
 #logo {
-  /* border: 3.5px solid white; */
   background-image: url(./images/10.gif);
   background-position: center;
   background-size: 300px;
@@ -144,10 +142,6 @@ footer,
   background-image: url("./images/26.gif");
   background-position: center;
 }
-/* {
-  background-image: url("./images/26.gif");
-  background-position: center;
-} */
 
 .groups {
   display: inline-block;
@@ -168,6 +162,8 @@ footer,
   margin: 2rem auto 0.5rem auto;
   border-radius: 5px;
   border: 1px solid aliceblue;
+  background-color: white;
+  color: black;
 }
 
 .card {
@@ -184,6 +180,7 @@ footer,
 .admin-box {
   border: 2px solid darkred;
   /* box-shadow: 1px 1px 5px -4px #e02e19; */
+  /* border: 2px solid #382f35; */
   border: 2px solid #c0c3c6;
   background-color: #55475073;
 }
@@ -282,9 +279,6 @@ footer,
   padding: 10px;
   padding-bottom: 0;
   border-radius: 10px;
-  background-color: #231e1f;
-  background-color: #231e1fb3;
-
   box-shadow: 6px 6px 10px -3px #101010;
 }
 
@@ -335,6 +329,16 @@ footer {
   }
   .group-info {
     margin-top: 10px;
+  }
+  .admin-box {
+    padding: 9px 9px 0 9px;
+  }
+  .admin-dp {
+    width: 65px;
+    height: 67px;
+  }
+  .admin-name {
+    font-size: 14px;
   }
 }
 
@@ -389,6 +393,14 @@ footer {
   }
   .admin-box {
     margin: 6px;
+    padding: 8px 8px 0 8px;
+  }
+  .admin-dp {
+    width: 60px;
+    height: 62px;
+  }
+  .admin-name {
+    font-size: 13px;
   }
 }
 
@@ -409,9 +421,16 @@ footer {
   .admin-name {
     margin: 10px 0px 5px;
   }
+  .admin-box {
+    margin: 5px;
+    padding: 7px 7px 0 7px;
+  }
   .admin-dp {
-    width: 72px;
-    height: 74px;
+    width: 55px;
+    height: 56px;
+  }
+  .admin-name {
+    font-size: 12px;
   }
 }
 
