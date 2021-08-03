@@ -46,7 +46,7 @@ fetch(url)
     let blocked = setGroupLinks(data);
     if (blocked) {
       showErr(
-        "<strong>NOTE: </strong>Group Links are currently blocked ! Contact PVX admins."
+        "<strong>NOTE: </strong>Whatsapp Group Links are currently blocked ! Contact PVX admins."
       );
       return;
     }
@@ -65,7 +65,7 @@ fetch(url)
         let blocked = setGroupLinks(data);
         if (blocked) {
           showErr(
-            "<strong>NOTE: </strong>Group Links are currently blocked ! Contact PVX admins."
+            "<strong>NOTE: </strong>Whatsapp Group Links are currently blocked ! Contact PVX admins."
           );
           return;
         }
