@@ -272,26 +272,33 @@ footer,
   background-color: #0c151a;
   background-color: #0c151a73;
 }
-.tournament{
-  width: 40%;
+.tournament {
+  width: 500px;
 }
 
-.medal-img{
-  width: 25%;
+.medal-img {
+  width: 55px;
+  height: 55px;
 }
-.winners{ 
+.winners {
   display: flex;
-  margin-bottom: 19%;
-  
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 80px;
 }
-.winners-1{
-  transform: translateX(100%);
+.winners div {
+  width: 110px;
 }
-.winners-2{
-  transform: translate(-50%,90%);
+.winners-1 {
+  /* transform: translateX(100%); */
 }
-.winners-3{
-  transform: translate(-50%,110%);
+.winners-2 {
+  transform: translateY(40px);
+}
+.winners-3 {
+  transform: translateY(50px);
+}
+.chess-heading {
 }
 
 /*======== ADMIN SECTION =======*/
@@ -337,9 +344,9 @@ footer {
   .drive-text {
     margin: 25px 15px;
   }
-  .achieve-box {
-  }
-  .achieve-box img {
+
+  .donation img,
+  .unread img {
     width: 85vw;
     padding: 12px 0 0;
   }
@@ -384,7 +391,9 @@ footer {
     /* border: 3px solid white; */
     /* padding: 3px; */
   }
-
+  .tournament {
+    width: 100%;
+  }
   .heading {
     font-size: 26px;
   }
@@ -453,6 +462,9 @@ footer {
   .admin-name {
     font-size: 12px;
   }
+  .winners div {
+    width: 33%;
+  } 
 }
 
 @media (max-width: 310px) {
