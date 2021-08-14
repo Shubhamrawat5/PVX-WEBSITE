@@ -272,6 +272,27 @@ footer,
   background-color: #0c151a;
   background-color: #0c151a73;
 }
+.tournament{
+  width: 40%;
+}
+
+.medal-img{
+  width: 25%;
+}
+.winners{ 
+  display: flex;
+  margin-bottom: 19%;
+  
+}
+.winners-1{
+  transform: translateX(100%);
+}
+.winners-2{
+  transform: translate(-50%,90%);
+}
+.winners-3{
+  transform: translate(-50%,110%);
+}
 
 /*======== ADMIN SECTION =======*/
 .admin-box {
