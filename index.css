@@ -26,7 +26,7 @@ nav {
   position: fixed;
   z-index: 1;
   background: #1a0202de;
-  box-shadow: rgb(0 0 0 / 5%) 0px 5px 10px;
+  box-shadow: 0px 3px 6px rgb(62 43 43 / 60%);
 }
 
 .nav-item-container {
@@ -221,8 +221,7 @@ footer,
   align-items: center;
   text-align: left;
 }
-.drive-subheading {
-}
+
 .drive-img {
   width: 50%;
   max-width: 460px;
@@ -289,16 +288,12 @@ footer,
 .winners div {
   width: 110px;
 }
-.winners-1 {
-  /* transform: translateX(100%); */
-}
+
 .winners-2 {
   transform: translateY(40px);
 }
 .winners-3 {
   transform: translateY(50px);
-}
-.chess-heading {
 }
 
 /*======== ADMIN SECTION =======*/
@@ -375,9 +370,6 @@ footer {
   .err {
     font-size: 12px;
   }
-  nav {
-    /* position: static; */
-  }
   li {
     display: none;
     margin: 0 12px 0 3px;
@@ -436,7 +428,7 @@ footer {
 
 @media (max-width: 380px) {
   nav {
-    padding: 5px 8px;
+    padding: 5px;
   }
   .card {
     height: 215px;
@@ -464,7 +456,7 @@ footer {
   }
   .winners div {
     width: 33%;
-  } 
+  }
 }
 
 @media (max-width: 310px) {
