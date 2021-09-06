@@ -1,0 +1,55 @@
+import React from "react";
+
+export default function Others() {
+  return (
+    <section id="achieve-section" className="section">
+      <h2 className="section-heading">OTHERS</h2>
+      <div className="achieve-container">
+        <div data-aos="zoom-in" className="achieve-box unread">
+          <img loading="lazy" src="images/pvx/unread.jpg" alt="" />
+          <p>
+            Yes it is real! Unread message over some years. <br /> Credits:
+            Hritik Jain
+          </p>
+        </div>
+
+        <div data-aos="zoom-in" className="achieve-box donation">
+          <img loading="lazy" src="images/pvx/certi.jpg" alt="" />
+          <p>Donations collected by PVX in Feb 2020</p>
+        </div>
+        <div data-aos="zoom-in" className="achieve-box tournament">
+          <div className="winners">
+            <div className="winners-2">
+              <img
+                loading="lazy"
+                src="images/medal 2.png"
+                alt=""
+                className="medal-img"
+              />
+              <p>Nikunj NJV</p>
+            </div>
+            <div className="winners-1">
+              <img
+                loading="lazy"
+                src="images/medal.png"
+                alt=""
+                className="medal-img"
+              />
+              <p>Ash</p>
+            </div>
+            <div className="winners-3">
+              <img
+                loading="lazy"
+                src="images/medal 3.png"
+                alt=""
+                className="medal-img"
+              />
+              <p>Sweeton</p>
+            </div>
+          </div>
+          <p className="chess-heading">PVX CHESS TOURNAMENT (12/08/21)</p>
+        </div>
+      </div>
+    </section>
+  );
+}

@@ -1,0 +1,28 @@
+import React from "react";
+
+export default function Nav() {
+  return (
+    <nav>
+      <a href="#header">
+        <img className="nav-logo" src="images/pvxx.png" alt="" />
+      </a>
+      <div className="nav-item-container">
+        <a href="#header">
+          <li>Home</li>
+        </a>
+        <a href="#group-section">
+          <li className="imp-li group-nav">Groups</li>
+        </a>
+        <a href="#drive-section">
+          <li className="imp-li">Drive</li>
+        </a>
+        <a href="Community-Bday/community-bday.html">
+          <li className="imp-li">B'days</li>
+        </a>
+        <div className="theme-mode-container">
+          <img className="theme-mode" src="images/moon.svg" alt="mode" />
+        </div>
+      </div>
+    </nav>
+  );
+}
