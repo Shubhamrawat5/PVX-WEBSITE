@@ -32,7 +32,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 export default function Group() {
-  console.log("RENDER GROUP");
+  // console.log("RENDER GROUP");
   const [wagroups, setWagroups] = useState([
     {
       name: "COMMUNITY",
@@ -185,7 +185,7 @@ export default function Group() {
   );
 
   useEffect(() => {
-    console.log("USEEFFECT");
+    // console.log("USEEFFECT");
     const url = "https://pvxgroup.herokuapp.com/api/linkss";
     // const urlBackup = "https://pvxgroupbackup.herokuapp.com/api/links";
     const urlBackup = "https://pvxgroup.herokuapp.com/api/links";
@@ -216,7 +216,7 @@ export default function Group() {
       return false;
     }
 
-    async function start() {
+    async function tryWithUrl(url) {
       try {
         let { data } = await axios.get(url);
         let blocked = setGroupLinks(data);
@@ -224,32 +224,26 @@ export default function Group() {
           setlinksInfo(
             "NOTE: Whatsapp Group Links are currently blocked ! Contact PVX admins."
           );
-
-          return;
+          return true;
         }
         setlinksInfo("Group links added!");
         setTimeout(() => {
           setlinksInfo("");
+          return true;
         }, 2000);
       } catch {
-        //error in main url, now trying backup url
-        try {
-          console.log("Error in main url.. trying backup url.");
-          setlinksInfo("Problem with main url.. trying backup url.");
+        return false;
+      }
+    }
 
-          let { data } = await axios.get(urlBackup);
-          let blocked = setGroupLinks(data);
-          if (blocked) {
-            setlinksInfo(
-              "NOTE: Whatsapp Group Links are currently blocked ! Contact PVX admins."
-            );
-            return;
-          }
-          setlinksInfo("Group links added!");
-          setTimeout(() => {
-            setlinksInfo("");
-          }, 2000);
-        } catch {
+    async function start() {
+      let response = await tryWithUrl(url);
+      if (response === false) {
+        //error in main url, now trying backup url
+        console.log("Error in main url.. trying backup url.");
+        setlinksInfo("Problem with main url.. trying backup url.");
+        let response = await tryWithUrl(urlBackup);
+        if (response === false) {
           setlinksInfo(
             "NOTE: There is a problem with attaching the group links ! Contact PVX admins."
           );
@@ -275,7 +269,12 @@ export default function Group() {
         <div className="group-container">
           {wagroups.map((group, index) => {
             return (
-              <a id="wa-community" href={group.url} key={index}>
+              <a
+                href={group.url}
+                key={index}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <div data-aos="fade" className="card">
                   <img className="group-dp" src={group.img} alt="" />
                   <h4 className="group-name">{group.name}</h4>
@@ -291,7 +290,11 @@ export default function Group() {
         <h3 className="app-heading">TELEGRAM</h3>
 
         <div className="group-container">
-          <a href="https://t.me/PVX_Community_Group">
+          <a
+            href="https://t.me/PVX_Community_Group"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <div data-aos="fade" className="card">
               <img loading="lazy" className="group-dp" src={tgpvxImg} alt="" />
               <h4 className="group-name">PVX COMMUNITY</h4>
@@ -299,7 +302,11 @@ export default function Group() {
             </div>
           </a>
 
-          <a href="https://t.me/pvxtechnews">
+          <a
+            href="https://t.me/pvxtechnews"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <div data-aos="fade" className="card">
               <img loading="lazy" className="group-dp" src={techImg} alt="" />
               <h4 className="group-name">TECH NEWS</h4>
@@ -307,7 +314,11 @@ export default function Group() {
             </div>
           </a>
 
-          <a href="https://t.me/joinchat/J7FzKB1uYt0xNDVl">
+          <a
+            href="https://t.me/joinchat/J7FzKB1uYt0xNDVl"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <div data-aos="fade" className="card">
               <img loading="lazy" className="group-dp" src={moviesImg} alt="" />
               <h4 className="group-name">MOVIES</h4>
@@ -315,7 +326,11 @@ export default function Group() {
             </div>
           </a>
 
-          <a href="https://t.me/PVXMIRROR">
+          <a
+            href="https://t.me/PVXMIRROR"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <div data-aos="fade" className="card">
               <img loading="lazy" className="group-dp" src={mirrorImg} alt="" />
               <h4 className="group-name">MIRROR</h4>
@@ -328,7 +343,11 @@ export default function Group() {
       <div className="fb groups">
         <h3 className="app-heading">FACEBOOK</h3>
         <div className="group-container">
-          <a href="https://facebook.com/groups/pvxgaming/">
+          <a
+            href="https://facebook.com/groups/pvxgaming/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <div data-aos="fade" className="card">
               <img loading="lazy" className="group-dp" src={fbImg} alt="" />
               <h4 className="group-name">PVX COMMUNITY</h4>
@@ -341,7 +360,11 @@ export default function Group() {
       <div className="discord groups">
         <h3 className="app-heading">DISCORD</h3>
         <div className="group-container">
-          <a href="https://discord.gg/zMktzNzx9U">
+          <a
+            href="https://discord.gg/zMktzNzx9U"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <div data-aos="fade" className="card">
               <img
                 loading="lazy"
@@ -359,7 +382,11 @@ export default function Group() {
       <div className="signal groups">
         <h3 className="app-heading">SIGNAL</h3>
         <div className="group-container">
-          <a href="https://signal.group/#CjQKIFt19XJr-7owvEs8F0otjk5TujIroVnPsqQB-QV8dQXCEhDbIbTkPzfIpDek1Xhoxk53">
+          <a
+            href="https://signal.group/#CjQKIFt19XJr-7owvEs8F0otjk5TujIroVnPsqQB-QV8dQXCEhDbIbTkPzfIpDek1Xhoxk53"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <div data-aos="fade" className="card">
               <img
                 loading="lazy"

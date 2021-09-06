@@ -14,7 +14,11 @@ export default function Drive() {
         <p className="drive-text">
           Join PVX Shared Drive
           <br />
-          <a href="https://groups.google.com/g/pvx-movies">
+          <a
+            href="https://groups.google.com/g/pvx-movies"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             click here for link.
           </a>
           <br />
