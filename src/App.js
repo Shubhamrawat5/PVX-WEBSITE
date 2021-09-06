@@ -1,6 +1,6 @@
 import Nav from "./components/Nav";
 import Header from "./components/Header";
-import Group from "./components/Group";
+import Group from "./views/Group";
 import Drive from "./components/Drive";
 import Others from "./components/Others";
 
