@@ -1,10 +1,11 @@
 import React from "react";
+import navLogoImg from "../asserts/images/pvxx.png";
 
 export default function Nav() {
   return (
     <nav>
       <a href="#header">
-        <img className="nav-logo" src="images/pvxx.png" alt="" />
+        <img className="nav-logo" src={navLogoImg} alt="logo" />
       </a>
       <div className="nav-item-container">
         <a href="#header">
@@ -19,9 +20,9 @@ export default function Nav() {
         <a href="Community-Bday/community-bday.html">
           <li className="imp-li">B'days</li>
         </a>
-        <div className="theme-mode-container">
+        {/* <div className="theme-mode-container">
           <img className="theme-mode" src="images/moon.svg" alt="mode" />
-        </div>
+        </div> */}
       </div>
     </nav>
   );
