@@ -1,4 +1,3 @@
-import React from "react";
 import communityImg from "../asserts/images/group/main.jpg";
 import techImg from "../asserts/images/group/tech.jpg";
 import progImg from "../asserts/images/group/prog.jpg";
@@ -29,8 +28,12 @@ import mirrorImg from "../asserts/images/group/mirror.jpg";
 import fbImg from "../asserts/images/group/fb.jpg";
 import discordImg from "../asserts/images/group/discord.jpg";
 
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+
 export default function Group() {
-  let wagroups = [
+  console.log("RENDER GROUP");
+  const [wagroups, setWagroups] = useState([
     {
       name: "COMMUNITY",
       desc: "Main Group, For all Discussion",
@@ -175,14 +178,98 @@ export default function Group() {
       img: codmImg,
       url: "",
     },
-  ];
+  ]);
+
+  const [linksInfo, setlinksInfo] = useState(
+    "Adding group links data... please wait."
+  );
+
+  useEffect(() => {
+    console.log("USEEFFECT");
+    const url = "https://pvxgroup.herokuapp.com/api/linkss";
+    // const urlBackup = "https://pvxgroupbackup.herokuapp.com/api/links";
+    const urlBackup = "https://pvxgroup.herokuapp.com/api/links";
+
+    function setGroupLinks(data) {
+      let newState = [];
+
+      //check if group links are blocked or not
+      data.forEach((grp) => {
+        if (grp.name === "website") {
+          if (grp.link === "") return true;
+        }
+      });
+
+      //grpExt = coming from outside - api
+      //grpIn = present inside already
+      wagroups.forEach((grpIn) => {
+        data.forEach((grpOut) => {
+          if (grpOut.name === grpIn.name.toLowerCase()) {
+            newState.push({
+              ...grpIn,
+              url: grpOut.link,
+            });
+          }
+        });
+      });
+      setWagroups(newState);
+      return false;
+    }
+
+    async function start() {
+      try {
+        let { data } = await axios.get(url);
+        let blocked = setGroupLinks(data);
+        if (blocked) {
+          setlinksInfo(
+            "NOTE: Whatsapp Group Links are currently blocked ! Contact PVX admins."
+          );
+
+          return;
+        }
+        setlinksInfo("Group links added!");
+        setTimeout(() => {
+          setlinksInfo("");
+        }, 2000);
+      } catch {
+        //error in main url, now trying backup url
+        try {
+          console.log("Error in main url.. trying backup url.");
+          setlinksInfo("Problem with main url.. trying backup url.");
+
+          let { data } = await axios.get(urlBackup);
+          let blocked = setGroupLinks(data);
+          if (blocked) {
+            setlinksInfo(
+              "NOTE: Whatsapp Group Links are currently blocked ! Contact PVX admins."
+            );
+            return;
+          }
+          setlinksInfo("Group links added!");
+          setTimeout(() => {
+            setlinksInfo("");
+          }, 2000);
+        } catch {
+          setlinksInfo(
+            "NOTE: There is a problem with attaching the group links ! Contact PVX admins."
+          );
+        }
+      }
+    }
+
+    start();
+    //TODO: fix this eslint warning
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <section id="group-section" className="section">
       <h2 className="section-heading">PVX FAMILY GROUPS</h2>
-      <div id="err" className="err">
-        adding group links data. please wait.
-      </div>
+      {linksInfo ? (
+        <div id="err" className="err">
+          {linksInfo}
+        </div>
+      ) : null}
       <div className="wa groups">
         <h3 className="app-heading">WHATSAPP</h3>
         <div className="group-container">

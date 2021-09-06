@@ -18,11 +18,8 @@ export default function Nav() {
           <li className="imp-li">Drive</li>
         </a>
         <a href="Community-Bday/community-bday.html">
-          <li className="imp-li">B'days</li>
+          <li className="imp-li">B'Days</li>
         </a>
-        {/* <div className="theme-mode-container">
-          <img className="theme-mode" src="images/moon.svg" alt="mode" />
-        </div> */}
       </div>
     </nav>
   );
