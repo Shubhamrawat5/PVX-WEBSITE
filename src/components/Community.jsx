@@ -1,4 +1,5 @@
 import React from "react";
+import "../asserts/css/community.css";
 
 export default function Community() {
   let months = [
@@ -17,33 +18,30 @@ export default function Community() {
   ];
   return (
     <>
-      <header>
-        <h1>PVX</h1>
-        <h2>Birthday List</h2>
-      </header>
-      <div class="wish">
-        <div class="gif"></div>
-        <div class="today-bday-text">
-          <h6 class="happy-birthday">Happy Birthday</h6>
-          <h6 class="bdy-boy">""</h6>
+      <h2 className="bday-header_b">Birthday List</h2>
+      <div className="wish_b">
+        <div className="gif_b"></div>
+        <div className="today-bday-text_b">
+          <h6 className="happy-birthday_b">Happy Birthday</h6>
+          <h6 className="bdy-boy_b">""</h6>
         </div>
-        <img src="balloon.png" class="balloon" alt=""></img>
-        <img src="balloon.png" class="balloon balloon2" alt=""></img>
+        <img src="balloon.png" className="balloon_b" alt=""></img>
+        <img src="balloon.png" className="balloon_b balloon2_b" alt=""></img>
       </div>
 
-      <div id="err" class="err">
+      <div id="err" className="err">
         adding bday data. please wait.
       </div>
 
-      <div class="months-container">
-        <div class="card" id="january">
-          <div class="month">January</div>
-          <table class="content-table">
+      <div className="months-container_b">
+        <div className="card_b" id="january">
+          <div className="month_b">January</div>
+          <table className="content-table_b">
             <thead>
-              <th class="date">Date</th>
-              <th class="name">Name</th>
-              <th class="username">Username</th>
-              <th class="place">Place</th>
+              <th className="date_b">Date</th>
+              <th className="name_b">Name</th>
+              <th className="username_b">Username</th>
+              <th class="place_b">Place</th>
             </thead>
             <tbody id="january-body"></tbody>
           </table>
@@ -51,14 +49,14 @@ export default function Community() {
 
         {months.map((month, index) => {
           return (
-            <div class="card" id={month.toLowerCase()}>
-              <div class={`month month${index + 1}`}>{month}</div>
-              <table class={`content-table month${index + 1}-tr`}>
+            <div className="card_b" id={month.toLowerCase()}>
+              <div className={`month_b month${index + 1}`}>{month}</div>
+              <table className={`content-table_b month${index + 1}-tr_b`}>
                 <thead>
-                  <th class="date">Date</th>
-                  <th class="name">Name</th>
-                  <th class="username">Username</th>
-                  <th class="place">Place</th>
+                  <th className="date_b">Date</th>
+                  <th className="name_b">Name</th>
+                  <th className="username_b">Username</th>
+                  <th class="place_b">Place</th>
                 </thead>
                 <tbody id={`${month.toLowerCase()}-body`}>
                   {/* <tr>
