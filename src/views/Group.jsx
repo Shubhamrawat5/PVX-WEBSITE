@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Whatsapp from "../components/group/Whatsapp";
@@ -13,6 +12,7 @@ export default function Group(props) {
 
   useEffect(() => {
     console.log("USEEFFECT GROUP");
+
     if (wagroups[1].url !== "https://") return; //to avoid reattaching group links when internal page change
 
     setlinksInfo("Adding group links data... please wait.");

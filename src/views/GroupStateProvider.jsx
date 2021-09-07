@@ -32,7 +32,7 @@ export default function GroupStateProvider() {
     },
     {
       name: "TECH DISCUSSION",
-      desc: "For Technology Discussion",
+      desc: "For Technology related Discussion",
       img: techImg,
       url: "https://",
     },
@@ -62,19 +62,19 @@ export default function GroupStateProvider() {
     },
     {
       name: "MEMES",
-      desc: "For Memes Sharing",
+      desc: "For latest Memes Sharing",
       img: memeImg,
       url: "https://",
     },
     {
       name: "STICKER 1.0",
-      desc: "For Sticker Sharing",
+      desc: "For new Sticker Sharing",
       img: sticker1Img,
       url: "https://",
     },
     {
       name: "STICKER 2.0",
-      desc: "For Sticker Sharing",
+      desc: "For new Sticker Sharing",
       img: sticker2Img,
       url: "https://",
     },

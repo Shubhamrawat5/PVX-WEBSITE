@@ -1,31 +1,20 @@
 import "../asserts/css/community.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Month from "../components/Month";
 
-export default function Community() {
+export default function Community(props) {
   console.log("RENDER COMMUNITY");
-  let months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
+  const { months, setMonths } = props;
 
-  const [didUnMount, setDidUnMount] = useState(false); //to check if component is unmounted or not!
-  const [linksInfo, setlinksInfo] = useState(
-    "Adding group links data... please wait."
-  );
+  // const [didUnMount, setDidUnMount] = useState(false); //to check if component is unmounted or not!
+  const [linksInfo, setlinksInfo] = useState("");
 
   useEffect(() => {
     console.log("USEEFFECT COMMUNITY");
+    if (months[0].members.length !== 0) return; //already attached bdays!
+
+    setlinksInfo("Adding Bday data... please wait.");
     const url = "https://pvxgroup.herokuapp.com/api/bday";
     const urlBackup = "https://pvxgroupbackup.herokuapp.com/api/bdaay";
 
@@ -35,48 +24,38 @@ export default function Community() {
       const todayDate = d.getDate();
       const todayMonth = d.getMonth() + 1; //0 to 11
 
+      let newState = months;
+
       data.forEach((item) => {
         const { name, username, date, month, place } = item;
-        if (todayDate === date && todayMonth === month) {
-          console.log(`TODAY IS ${name} Birthday`);
-          document.querySelector(".wish").classList.add("show");
 
-          // check if multiple member bday or not
-          if (document.querySelector(".bdy-boy").textContent === "")
-            document.querySelector(".bdy-boy").textContent = name;
-          else document.querySelector(".bdy-boy").textContent += " & " + name;
-        }
+        //TODO: show today birthday
+        // if (todayDate === date && todayMonth === month) {
+        //   console.log(`TODAY IS ${name} Birthday`);
+        //   document.querySelector(".wish").classList.add("show");
 
-        let monthBody = months[month - 1].toLowerCase() + "-body"; //in html tbody
+        //   // check if multiple member bday or not
+        //   if (document.querySelector(".bdy-boy").textContent === "")
+        //     document.querySelector(".bdy-boy").textContent = name;
+        //   else document.querySelector(".bdy-boy").textContent += " & " + name;
+        // }
 
-        document.getElementById(monthBody).innerHTML += `<tr> 
-        <td>${date}</td>
-        <td>${name.toLowerCase()}</td>
-        <td>${username.toLowerCase()}</td>
-        <td>${place.toLowerCase()}</td>
-        </tr>
-        `;
+        newState[month - 1].members.push({ date, name, username, place });
       });
+
+      setMonths(newState);
     }
 
     async function tryWithUrl(url) {
       // try {
       let { data } = await axios.get(url);
-      let blocked = setBdays(data);
-      if (blocked) {
-        setlinksInfo(
-          "NOTE: Whatsapp Group Links are currently blocked ! Contact PVX admins."
-        );
-        return true;
-      }
-      setlinksInfo("Group links added!");
+      setBdays(data);
+
+      setlinksInfo("Bday data added!");
       setTimeout(() => {
         setlinksInfo("");
         return true;
       }, 2000);
-      // } catch {
-      //   return false;
-      // }
     }
 
     async function start() {
@@ -88,14 +67,14 @@ export default function Community() {
         let response = await tryWithUrl(urlBackup);
         if (response === false) {
           setlinksInfo(
-            "NOTE: There is a problem with attaching the group links ! Contact PVX admins."
+            "NOTE: There is a problem with attaching the bday data ! Contact PVX admins."
           );
         }
       }
     }
 
     start();
-    return () => setDidUnMount(true);
+    // return () => setDidUnMount(true);
     //TODO: fix this eslint warning
     // eslint-disable-next-line
   }, []);
@@ -115,45 +94,13 @@ export default function Community() {
 
       <div className="months-container_b">
         {linksInfo ? (
-          <div id="err" className="err">
+          <div id="err" className="err" style={{ border: "1px solid black" }}>
             {linksInfo}
           </div>
         ) : null}
-        {/* <div className="card_b" id="january">
-          <div className="month_b">January</div>
-          <table className="content-table_b">
-            <thead>
-              <th className="date_b">Date</th>
-              <th className="name_b">Name</th>
-              <th className="username_b">Username</th>
-              <th class="place_b">Place</th>
-            </thead>
-            <tbody id="january-body"></tbody>
-          </table>
-        </div> */}
 
         {months.map((month, index) => {
-          return (
-            <div className="card_b" id={month.toLowerCase()} key={index}>
-              <div className={`month_b month${(index % 3) + 1}_b`}>{month}</div>
-              <table className={`content-table_b month${(index % 3) + 1}-tr_b`}>
-                <thead>
-                  <th className="date_b">Date</th>
-                  <th className="name_b">Name</th>
-                  <th className="username_b">Username</th>
-                  <th className="place_b">Place</th>
-                </thead>
-                <tbody id={`${month.toLowerCase()}-body`}>
-                  {/* <tr>
-            <td>24</td>
-            <td>Nitesh</td>
-            <td>Shi3ld</td>
-            <td>Uttarakhand</td>
-          </tr> */}
-                </tbody>
-              </table>
-            </div>
-          );
+          return <Month month={month} index={index} key={index} />;
         })}
       </div>
     </section>

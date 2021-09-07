@@ -8,10 +8,12 @@ import Footer from "./components/Footer";
 import Community from "./views/Community";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import GroupStateProvider from "./views/GroupStateProvider";
+import BdayStateProvider from "./views/BdayStateProvider";
 import { useState } from "react";
 
 function App() {
   const [wagroups, setWagroups] = useState(GroupStateProvider());
+  const [months, setMonths] = useState(BdayStateProvider());
 
   return (
     <Router>
@@ -27,7 +29,7 @@ function App() {
         </Route>
 
         <Route exact path="/community">
-          <Community />
+          <Community months={months} setMonths={setMonths} />
         </Route>
 
         <Route>
