@@ -1,12 +1,9 @@
-import tgpvxImg from "../asserts/images/group/tg-pvx.jpg";
-import mirrorImg from "../asserts/images/group/mirror.jpg";
-import techImg from "../asserts/images/group/tech.jpg";
-import moviesImg from "../asserts/images/group/movies.jpg";
-import communityImg from "../asserts/images/group/main.jpg";
-import fbImg from "../asserts/images/group/fb.jpg";
-import discordImg from "../asserts/images/group/discord.jpg";
+
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Whatsapp from "../components/group/Whatsapp";
+import Telegram from "../components/group/Telegram";
+import OtherGroups from "../components/group/OtherGroups";
 
 export default function Group(props) {
   console.log("RENDER GROUP");
@@ -97,142 +94,9 @@ export default function Group(props) {
           {linksInfo}
         </div>
       ) : null}
-      <div className="wa groups">
-        <h3 className="app-heading">WHATSAPP</h3>
-        <div className="group-container">
-          {wagroups.map((group, index) => {
-            return (
-              <a
-                href={group.url}
-                key={index}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div data-aos="fade" className="card">
-                  <img className="group-dp" src={group.img} alt="" />
-                  <h4 className="group-name">{group.name}</h4>
-                  <p className="group-info">{group.desc}</p>
-                </div>
-              </a>
-            );
-          })}
-        </div>
-      </div>
-
-      <div className="tg groups">
-        <h3 className="app-heading">TELEGRAM</h3>
-
-        <div className="group-container">
-          <a
-            href="https://t.me/PVX_Community_Group"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div data-aos="fade" className="card">
-              <img loading="lazy" className="group-dp" src={tgpvxImg} alt="" />
-              <h4 className="group-name">PVX COMMUNITY</h4>
-              <p className="group-info">Telegram Group Chat</p>
-            </div>
-          </a>
-
-          <a
-            href="https://t.me/pvxtechnews"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div data-aos="fade" className="card">
-              <img loading="lazy" className="group-dp" src={techImg} alt="" />
-              <h4 className="group-name">TECH NEWS</h4>
-              <p className="group-info">For Daily Tech News</p>
-            </div>
-          </a>
-
-          <a
-            href="https://t.me/joinchat/J7FzKB1uYt0xNDVl"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div data-aos="fade" className="card">
-              <img loading="lazy" className="group-dp" src={moviesImg} alt="" />
-              <h4 className="group-name">MOVIES</h4>
-              <p className="group-info">For Movies & Series</p>
-            </div>
-          </a>
-
-          <a
-            href="https://t.me/PVXMIRROR"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div data-aos="fade" className="card">
-              <img loading="lazy" className="group-dp" src={mirrorImg} alt="" />
-              <h4 className="group-name">MIRROR</h4>
-              <p className="group-info">For Copying Files to Gdrive</p>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <div className="fb groups">
-        <h3 className="app-heading">FACEBOOK</h3>
-        <div className="group-container">
-          <a
-            href="https://facebook.com/groups/pvxgaming/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div data-aos="fade" className="card">
-              <img loading="lazy" className="group-dp" src={fbImg} alt="" />
-              <h4 className="group-name">PVX COMMUNITY</h4>
-              <p className="group-info">Facebook PVX group</p>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <div className="discord groups">
-        <h3 className="app-heading">DISCORD</h3>
-        <div className="group-container">
-          <a
-            href="https://discord.gg/zMktzNzx9U"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div data-aos="fade" className="card">
-              <img
-                loading="lazy"
-                className="group-dp"
-                src={discordImg}
-                alt=""
-              />
-              <h4 className="group-name">PVX COMMUNITY</h4>
-              <p className="group-info">Discord PVX group</p>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <div className="signal groups">
-        <h3 className="app-heading">SIGNAL</h3>
-        <div className="group-container">
-          <a
-            href="https://signal.group/#CjQKIFt19XJr-7owvEs8F0otjk5TujIroVnPsqQB-QV8dQXCEhDbIbTkPzfIpDek1Xhoxk53"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div data-aos="fade" className="card">
-              <img
-                loading="lazy"
-                className="group-dp"
-                src={communityImg}
-                alt=""
-              />
-              <h4 className="group-name">PVX COMMUNITY</h4>
-              <p className="group-info">Signal PVX group</p>
-            </div>
-          </a>
-        </div>
-      </div>
+      <Whatsapp wagroups={wagroups} />
+      <Telegram />
+      <OtherGroups />
     </section>
   );
 }
