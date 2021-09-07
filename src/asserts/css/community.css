@@ -1,12 +1,14 @@
-body {
+#birthday_b {
   background-size: auto;
-  /* background-image: url("https://thumbs.dreamstime.com/b/high-tech-eco-green-infinity-computer-technology-concept-backgro-background-32595794.jpg"); */
-  /* text-align: center;
-  font-family: "Newsreader", serif; */
+  background-image: url("https://thumbs.dreamstime.com/b/high-tech-eco-green-infinity-computer-technology-concept-backgro-background-32595794.jpg");
+  color: black;
 }
 
 .bday-header_b {
-  padding: 50px 0 10px 0;
+  font-size: 26px;
+  font-weight: 500;
+  margin: 25px 0 10px 0;
+  text-decoration: underline;
 }
 
 .wish_b {
@@ -18,10 +20,6 @@ body {
   overflow: hidden;
   display: none;
 }
-
-/* .show {
-  display: inline-flex;
-} */
 
 .happy-birthday_b {
   font-family: "Satisfy", cursive;
@@ -76,7 +74,9 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 0 10px;
+  padding: 0 20px;
+  text-align: center;
+  font-family: "Newsreader", serif;
 }
 .card_b {
   position: relative;
@@ -107,7 +107,7 @@ body {
   left: 50%;
   transform: translateX(-75px);
   border: 1px solid rgba(0, 0, 0, 0.329);
-  width: 150px;
+  width: 165px;
   border-radius: 15px;
 }
 .month2_b {

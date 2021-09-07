@@ -1,25 +1,26 @@
 import React from "react";
 import navLogoImg from "../asserts/images/pvxx.png";
+import { Link } from "react-router-dom";
 
 export default function Nav() {
   return (
     <nav>
-      <a href="#header">
+      <Link to="/">
         <img className="nav-logo" src={navLogoImg} alt="logo" />
-      </a>
+      </Link>
       <div className="nav-item-container">
-        <a href="#header">
+        <Link to="/">
           <li>Home</li>
-        </a>
-        <a href="#group-section">
+        </Link>
+        {/* <Link to="/#group-section">
           <li className="imp-li group-nav">Groups</li>
-        </a>
-        <a href="#drive-section">
+        </Link>
+        <Link to="/#drive-section">
           <li className="imp-li">Drive</li>
-        </a>
-        <a href="Community-Bday/community-bday.html">
+        </Link> */}
+        <Link to="/community">
           <li className="imp-li">B'Days</li>
-        </a>
+        </Link>
       </div>
     </nav>
   );
