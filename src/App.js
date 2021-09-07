@@ -5,6 +5,7 @@ import Drive from "./components/Drive";
 import Others from "./components/Others";
 import Admin from "./components/Admin";
 import Footer from "./components/Footer";
+import Community from "./components/Community";
 
 function App() {
   return (

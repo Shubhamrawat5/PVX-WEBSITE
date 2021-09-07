@@ -1,0 +1,277 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-size: auto;
+  background-image: url("https://thumbs.dreamstime.com/b/high-tech-eco-green-infinity-computer-technology-concept-backgro-background-32595794.jpg");
+  text-align: center;
+  font-family: "Newsreader", serif;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.wish {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background: url("diwali.gif");
+  width: 100%;
+  overflow: hidden;
+  display: none;
+}
+
+.show {
+  display: inline-flex;
+}
+
+.err {
+  border: 1px solid #1e024b;
+  margin: 3px 4px;
+  padding: 3px 8px;
+  font-family: monospace;
+  font-size: 16px;
+}
+
+.happy-birthday {
+  font-family: "Satisfy", cursive;
+  text-shadow: 5px 4px 9px rgb(44, 37, 146);
+  margin: 0;
+  color: #fdfdfd;
+  font-weight: 400;
+  font-size: 46px;
+  position: relative;
+  top: 7px;
+}
+
+.bdy-boy {
+  font-size: 55px;
+  color: #c4c70cf1;
+  font-family: "Satisfy", cursive;
+  text-shadow: 5px 4px 5px red;
+  margin: 0;
+  animation: infinite o;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.gif {
+  background: url("cake.gif");
+  width: 135px;
+  height: 135px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.balloon {
+  width: 50px;
+  margin: 0 20px;
+  animation: down_up 3.5s infinite;
+  transform: translateY(130px);
+}
+
+.balloon2 {
+  animation-delay: 1s;
+}
+
+@keyframes down_up {
+  0% {
+  }
+  100% {
+    display: inline;
+    transform: translateY(-130px);
+  }
+}
+
+.months-container {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+}
+.card {
+  position: relative;
+  display: inline;
+  margin: 40px 15px 15px 15px;
+  border-radius: 2px 2px 8px 8px;
+  box-shadow: 2px 2px 12px 2px black;
+  width: 450px;
+}
+
+.content-table {
+  margin: 0%;
+  border-collapse: collapse;
+  font-size: 20px;
+}
+
+header {
+  background-color: #1e024b;
+  color: white;
+  text-align: center;
+  padding: 10px 0 15px 0;
+}
+
+h1 {
+  font-size: 42px;
+  font-weight: 500;
+  margin: 0px 0 15px 0;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 40px;
+  margin: 10px 0 0 0;
+}
+
+.month {
+  background-color: #feae96;
+  background-image: linear-gradient(315deg, #feae96 0%, #fe0944 74%);
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
+  font-size: 27px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bolder;
+  position: absolute;
+  top: -34px;
+  left: 50%;
+  transform: translateX(-75px);
+  border: 1px solid rgba(0, 0, 0, 0.329);
+  width: 150px;
+  border-radius: 15px;
+}
+.month2 {
+  background: linear-gradient(to right, #019d13 0%, #879e93 100%);
+}
+.month3 {
+  background: linear-gradient(to right, #03019d 0%, #969aa6 100%);
+}
+
+.content-table thead {
+  background-color: #ee9617;
+  background-image: linear-gradient(315deg, #e4b573 0%, #fe5858 74%);
+  color: #ffffff;
+  text-align: center;
+  font-family: "Roboto";
+}
+.td {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.month2-tr thead {
+  background: linear-gradient(to right, #54c060 0%, #60cc60 100%);
+}
+.month3-tr thead {
+  background-color: #2a2a72;
+  background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+}
+
+.content-table th {
+  padding: 30px 10px 10px 10px;
+  width: 140px;
+}
+.content-table td {
+  padding: 9px 6px 7px 6px;
+  word-break: break-word;
+  text-transform: capitalize;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid #f5f2f2;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #eeeaeab7;
+}
+
+.date {
+  width: 30px !important;
+}
+
+footer {
+  background-color: #1e024b;
+  color: white;
+  padding: 16px 0 10px 0;
+  margin-top: 1rem;
+  font-size: 20px;
+}
+
+@media (max-width: 700px) {
+  h1 {
+    font-size: calc(1rem + 4vw);
+  }
+  h2 {
+    font-size: calc(1rem + 3vw);
+  }
+  .today-bday-text {
+    width: 80%;
+  }
+  .happy-birthday {
+    font-size: 42px;
+  }
+  .bdy-boy {
+    font-size: 50px;
+  }
+  .balloon {
+    width: 46px;
+  }
+  .balloon2 {
+    display: none;
+  }
+  .gif {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+@media (max-width: 500px) {
+  .err {
+    font-size: 14px;
+  }
+  h1 {
+    font-size: calc(1rem + 3vw);
+  }
+  h2 {
+    font-size: 27px;
+  }
+  .happy-birthday {
+    font-size: 36px;
+    z-index: 1;
+  }
+  .bdy-boy {
+    font-size: 40px;
+    z-index: 1;
+  }
+  .balloon {
+    z-index: 0;
+    position: absolute;
+    right: 0;
+  }
+  .month {
+    font-size: 22px;
+    padding: 6px;
+    top: -28px;
+  }
+  .months-container {
+    padding: 0 15px;
+  }
+  .content-table th {
+    padding: 20px 3px 6px 3px;
+    font-size: 18px;
+  }
+  .content-table td {
+    font-size: 17px;
+    padding: 10px 3px 10px 3px;
+  }
+  .card {
+    width: 100%;
+    margin: 40px 0px 15px 0px;
+  }
+  footer {
+    font-size: 18px;
+  }
+}
