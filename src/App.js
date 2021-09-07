@@ -5,10 +5,14 @@ import Drive from "./components/Drive";
 import Others from "./components/Others";
 import Admin from "./components/Admin";
 import Footer from "./components/Footer";
-import Community from "./components/Community";
+import Community from "./views/Community";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import GroupStateProvider from "./views/GroupStateProvider";
+import { useState } from "react";
 
 function App() {
+  const [wagroups, setWagroups] = useState(GroupStateProvider());
+
   return (
     <Router>
       <Nav />
@@ -16,7 +20,7 @@ function App() {
       <Switch>
         <Route exact path="/">
           <Header />
-          <Group />
+          <Group wagroups={wagroups} setWagroups={setWagroups} />
           <Drive />
           <Others />
           <Admin />

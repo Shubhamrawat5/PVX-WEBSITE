@@ -15,7 +15,7 @@
   position: relative;
   justify-content: center;
   align-items: center;
-  /* background: url("diwali.gif"); */
+  background: url("../images/diwali.gif");
   width: 100%;
   overflow: hidden;
   display: none;
@@ -43,7 +43,7 @@
   text-transform: capitalize;
 }
 .gif_b {
-  /* background: url("cake.gif"); */
+  background: url("../images/cake.gif");
   width: 135px;
   height: 135px;
   background-size: contain;

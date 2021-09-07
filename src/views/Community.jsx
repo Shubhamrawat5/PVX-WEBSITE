@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 export default function Community() {
+  console.log("RENDER COMMUNITY");
   let months = [
     "January",
     "February",
@@ -18,11 +19,13 @@ export default function Community() {
     "December",
   ];
 
+  const [didUnMount, setDidUnMount] = useState(false); //to check if component is unmounted or not!
   const [linksInfo, setlinksInfo] = useState(
     "Adding group links data... please wait."
   );
 
   useEffect(() => {
+    console.log("USEEFFECT COMMUNITY");
     const url = "https://pvxgroup.herokuapp.com/api/bday";
     const urlBackup = "https://pvxgroupbackup.herokuapp.com/api/bdaay";
 
@@ -34,18 +37,17 @@ export default function Community() {
 
       data.forEach((item) => {
         const { name, username, date, month, place } = item;
-        // if (todayDate === date && todayMonth === month) {
-        //   console.log(`TODAY IS ${name} Birthday`);
-        //   document.querySelector(".wish").classList.add("show");
+        if (todayDate === date && todayMonth === month) {
+          console.log(`TODAY IS ${name} Birthday`);
+          document.querySelector(".wish").classList.add("show");
 
-        //   // check if multiple member bday or not
-        //   if (document.querySelector(".bdy-boy").textContent === "")
-        //     document.querySelector(".bdy-boy").textContent = name;
-        //   else document.querySelector(".bdy-boy").textContent += " & " + name;
-        // }
+          // check if multiple member bday or not
+          if (document.querySelector(".bdy-boy").textContent === "")
+            document.querySelector(".bdy-boy").textContent = name;
+          else document.querySelector(".bdy-boy").textContent += " & " + name;
+        }
 
         let monthBody = months[month - 1].toLowerCase() + "-body"; //in html tbody
-        console.log(monthBody);
 
         document.getElementById(monthBody).innerHTML += `<tr> 
         <td>${date}</td>
@@ -93,6 +95,7 @@ export default function Community() {
     }
 
     start();
+    return () => setDidUnMount(true);
     //TODO: fix this eslint warning
     // eslint-disable-next-line
   }, []);
