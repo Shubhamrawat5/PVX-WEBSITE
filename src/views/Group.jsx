@@ -1,24 +1,24 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import Whatsapp from "../components/group/Whatsapp";
 import Telegram from "../components/group/Telegram";
 import OtherGroups from "../components/group/OtherGroups";
 
 export default function Group(props) {
-  console.log("RENDER GROUP");
   const { wagroups, setWagroups } = props;
+  const isUnmounted = useRef(false);
 
   const [linksInfo, setlinksInfo] = useState("");
 
   useEffect(() => {
-    console.log("USEEFFECT GROUP");
+    if (isUnmounted.current) return;
 
+    //TODO: fix this if
     if (wagroups[1].url !== "https://") return; //to avoid reattaching group links when internal page change
 
     setlinksInfo("Adding group links data... please wait.");
-    const url = "https://pvxgroup.herokuapp.com/api/linkss";
-    // const urlBackup = "https://pvxgroupbackup.herokuapp.com/api/links";
-    const urlBackup = "https://pvxgroup.herokuapp.com/api/links";
+    const url = "https://pvxgroup.herokuapp.com/api/links";
+    const urlBackup = "https://pvxgroupbackup.herokuapp.com/api/links";
 
     function setGroupLinks(data) {
       let newState = [];
@@ -42,7 +42,8 @@ export default function Group(props) {
           }
         });
       });
-      setWagroups(newState);
+      if (!isUnmounted.current) setWagroups(newState);
+
       return false;
     }
 
@@ -82,9 +83,15 @@ export default function Group(props) {
     }
 
     start();
+
+    return () => {
+      isUnmounted.current = true;
+    };
     //TODO: fix this eslint warning
     // eslint-disable-next-line
   }, []);
+
+  //TODO: fix https a tag when links are not added
 
   return (
     <section id="group-section" className="section">

@@ -1,22 +1,24 @@
 import "../asserts/css/community.css";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import Month from "../components/Month";
 
 export default function Community(props) {
-  console.log("RENDER COMMUNITY");
   const { months, setMonths } = props;
+  const [todayBday, setTodayBday] = useState("");
+  const isUnmounted = useRef(false);
 
   // const [didUnMount, setDidUnMount] = useState(false); //to check if component is unmounted or not!
   const [linksInfo, setlinksInfo] = useState("");
 
   useEffect(() => {
-    console.log("USEEFFECT COMMUNITY");
+    if (isUnmounted.current) return;
+    //TODO: FIX THIS IF
     if (months[0].members.length !== 0) return; //already attached bdays!
 
     setlinksInfo("Adding Bday data... please wait.");
     const url = "https://pvxgroup.herokuapp.com/api/bday";
-    const urlBackup = "https://pvxgroupbackup.herokuapp.com/api/bdaay";
+    const urlBackup = "https://pvxgroupbackup.herokuapp.com/api/bday";
 
     function setBdays({ data }) {
       //get today date & month
@@ -25,24 +27,22 @@ export default function Community(props) {
       const todayMonth = d.getMonth() + 1; //0 to 11
 
       let newState = months;
+      let todayBdayTemp = "";
 
-      data.forEach((item) => {
-        const { name, username, date, month, place } = item;
+      data.forEach((member) => {
+        const { name, username, date, month, place } = member;
 
-        //TODO: show today birthday
-        // if (todayDate === date && todayMonth === month) {
-        //   console.log(`TODAY IS ${name} Birthday`);
-        //   document.querySelector(".wish").classList.add("show");
-
-        //   // check if multiple member bday or not
-        //   if (document.querySelector(".bdy-boy").textContent === "")
-        //     document.querySelector(".bdy-boy").textContent = name;
-        //   else document.querySelector(".bdy-boy").textContent += " & " + name;
-        // }
+        //TODO: TESTING TODAY BDAY
+        if (todayDate === date && todayMonth === month) {
+          console.log(`TODAY IS ${name} Birthday`);
+          todayBdayTemp += todayBdayTemp === "" ? name : " & " + name;
+        }
 
         newState[month - 1].members.push({ date, name, username, place });
       });
 
+      if (isUnmounted.current) return;
+      setTodayBday(todayBdayTemp);
       setMonths(newState);
     }
 
@@ -74,7 +74,9 @@ export default function Community(props) {
     }
 
     start();
-    // return () => setDidUnMount(true);
+    return () => {
+      isUnmounted.current = true;
+    };
     //TODO: fix this eslint warning
     // eslint-disable-next-line
   }, []);
@@ -86,7 +88,7 @@ export default function Community(props) {
         <div className="gif_b"></div>
         <div className="today-bday-text_b">
           <h6 className="happy-birthday_b">Happy Birthday</h6>
-          <h6 className="bdy-boy_b">""</h6>
+          <h6 className="bdy-boy_b">{todayBday}</h6>
         </div>
         <img src="balloon.png" className="balloon_b" alt=""></img>
         <img src="balloon.png" className="balloon_b balloon2_b" alt=""></img>
