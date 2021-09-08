@@ -14,6 +14,7 @@ export default function Group(props) {
     if (isUnmounted.current) return;
 
     //TODO: fix this if
+    // "" empty url when url is blocked | "https://" when url is not set
     if (wagroups[1].url !== "https://") return; //to avoid reattaching group links when internal page change
 
     setlinksInfo("Adding group links data... please wait.");
@@ -24,11 +25,11 @@ export default function Group(props) {
       let newState = [];
 
       //check if group links are blocked or not
+      let isBlocked = false;
       data.forEach((grp) => {
-        if (grp.name === "website") {
-          if (grp.link === "") return true;
-        }
+        if (grp.name === "website" && grp.link === "") isBlocked = true;
       });
+      if (isBlocked) return true;
 
       //grpExt = coming from outside - api
       //grpIn = present inside already
