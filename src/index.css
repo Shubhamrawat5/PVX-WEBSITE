@@ -16,6 +16,21 @@ body {
   letter-spacing: 0.5px;
 }
 
+nav,
+header,
+section,
+footer {
+  animation: fade-in;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+  }
+}
+
 /*================== NAV BAR ====================*/
 nav {
   display: inline-flex;
