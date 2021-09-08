@@ -10,7 +10,7 @@
 }
 .loader-svg text {
   text-transform: uppercase;
-  animation: stroke 3.5s infinite alternate;
+  animation: stroke 2s infinite alternate;
   stroke-width: 3;
   stroke: #000000c9;
   letter-spacing: 10px;

@@ -3,13 +3,13 @@
   background-image: url("https://thumbs.dreamstime.com/b/high-tech-eco-green-infinity-computer-technology-concept-backgro-background-32595794.jpg");
   color: black;
   letter-spacing: 0px;
+  padding: 30px 0 15px 0;
 }
 
 .bday-header_b {
   font-size: 26px;
   font-weight: 500;
   margin: 25px 0 10px 0;
-  text-decoration: underline;
   color: #000102d4;
 }
 
@@ -20,7 +20,8 @@
   background: url("../images/diwali.gif");
   width: 100%;
   overflow: hidden;
-  display: none;
+  display: flex;
+  margin: 10px 0;
 }
 
 .happy-birthday_b {
@@ -76,7 +77,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 0 20px;
+  padding: 0 15px;
   text-align: center;
   font-family: "Newsreader", serif;
 }
@@ -102,7 +103,7 @@
   text-align: center;
   padding: 10px;
   font-size: 27px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: bolder;
   position: absolute;
   top: -34px;
@@ -124,12 +125,7 @@
   background-image: linear-gradient(315deg, #e4b573 0%, #fe5858 74%);
   color: #ffffff;
   text-align: center;
-  font-family: "Roboto";
 }
-/* .td_b {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-} */
 
 .month2-tr_b thead {
   background: linear-gradient(to right, #54c060 0%, #60cc60 100%);
@@ -142,6 +138,7 @@
 .content-table_b th {
   padding: 30px 10px 10px 10px;
   width: 140px;
+  font-weight: 500;
 }
 .content-table_b td {
   padding: 9px 6px 7px 6px;
@@ -203,7 +200,7 @@
     top: -28px;
   }
   .months-container_b {
-    padding: 0;
+    padding: 0 10px;
   }
   .content-table_b th {
     padding: 20px 3px 6px 3px;

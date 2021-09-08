@@ -32,7 +32,7 @@ export default function GroupStateProvider() {
     },
     {
       name: "TECH DISCUSSION",
-      desc: "For Technology related Discussion",
+      desc: "For Tech related Discussion",
       img: techImg,
       url: "https://",
     },

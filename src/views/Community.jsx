@@ -1,4 +1,5 @@
 import "../asserts/css/community.css";
+import balloonImg from "../asserts/images/balloon.png";
 import { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import Month from "../components/Month";
@@ -83,17 +84,26 @@ export default function Community(props) {
 
   return (
     <section id="birthday_b">
-      <h2 className="bday-header_b">Birthday List</h2>
-      <div className="wish_b">
-        <div className="gif_b"></div>
-        <div className="today-bday-text_b">
-          <h6 className="happy-birthday_b">Happy Birthday</h6>
-          <h6 className="bdy-boy_b">{todayBday}</h6>
+      <h2 className="bday-header_b">
+        &lt;&#123;PVX&#125;&gt; COMMUNITY
+        <br />
+        <u> Birthday List</u>
+      </h2>
+      {todayBday !== "" ? (
+        <div className="wish_b">
+          <div className="gif_b"></div>
+          <div className="today-bday-text_b">
+            <h6 className="happy-birthday_b">Happy Birthday</h6>
+            <h6 className="bdy-boy_b">{todayBday}</h6>
+          </div>
+          <img src={balloonImg} className="balloon_b" alt="balloon"></img>
+          <img
+            src={balloonImg}
+            className="balloon_b balloon2_b"
+            alt="balloon"
+          ></img>
         </div>
-        <img src="balloon.png" className="balloon_b" alt=""></img>
-        <img src="balloon.png" className="balloon_b balloon2_b" alt=""></img>
-      </div>
-
+      ) : null}
       <div className="months-container_b">
         {linksInfo ? (
           <div id="err" className="err" style={{ border: "1px solid black" }}>
