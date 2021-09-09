@@ -1,6 +1,6 @@
 {
-  "name": "pvx-webpage",
-  "homepage": "https://shubhamrawat5.github.io/PVX_webpage",
+  "name": "pvx-website",
+  "homepage": "https://pvx.netlify.app/",
   "version": "0.1.0",
   "private": true,
   "author": "Shubham Rawat",
