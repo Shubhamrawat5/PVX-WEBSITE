@@ -6,6 +6,7 @@ import Others from "./components/Others";
 import Admin from "./components/Admin";
 import Footer from "./components/Footer";
 import Community from "./views/Community";
+// import About from "./components/About";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import GroupStateProvider from "./views/GroupStateProvider";
 import BdayStateProvider from "./views/BdayStateProvider";
@@ -26,18 +27,21 @@ function App() {
           <Drive />
           <Others />
           <Admin />
+          <Footer />
         </Route>
-
         <Route exact path="/community">
           <Community months={months} setMonths={setMonths} />
+          <Footer />
         </Route>
-
+        {/* <Route exact path="/about">
+          <About />
+        </Route> */}
         <Route>
-          <p style={{ padding: "100px 0 50px 0" }}>you're in wrong url.</p>
+          <p style={{ padding: "100px 0 50px 0", color: "black" }}>
+            you're in wrong url.
+          </p>
         </Route>
       </Switch>
-
-      <Footer />
     </Router>
   );
 }

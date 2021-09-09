@@ -20,11 +20,8 @@ export default function Nav() {
         <Link to="/">
           <li className={pathname === "/" ? "active" : null}>Home</li>
         </Link>
-        {/* <Link to="/#group-section">
-          <li className="imp-li group-nav">Groups</li>
-        </Link>
-        <Link to="/#drive-section">
-          <li className="imp-li">Drive</li>
+        {/* <Link to="/about">
+          <li className={pathname === "/about" ? "active" : null}>About</li>
         </Link> */}
         <Link to="/community">
           <li className={pathname === "/community" ? "active" : null}>

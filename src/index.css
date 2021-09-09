@@ -50,12 +50,13 @@ nav {
 .nav-item-container {
   display: inline-flex;
   align-items: center;
+  transform: translateY(2px);
 }
 
 .nav-logo {
   margin: 0;
   width: 80px;
-  height: ;
+  transform: translateY(2px);
   filter: invert(1);
 }
 
