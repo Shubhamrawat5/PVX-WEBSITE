@@ -6,9 +6,9 @@ import statusImg from "../asserts/images/group/status.jpg";
 import memeImg from "../asserts/images/group/meme.jpg";
 import sticker1Img from "../asserts/images/group/sticker1.jpg";
 import sticker2Img from "../asserts/images/group/sticker2.jpg";
+import sticker3Img from "../asserts/images/group/sticker3.jpg";
 import animeImg from "../asserts/images/group/anime.jpg";
 import botImg from "../asserts/images/group/bot.jpg";
-import photographyImg from "../asserts/images/group/photography.jpg";
 import haveliImg from "../asserts/images/group/haveli.jpg";
 import gamingImg from "../asserts/images/group/gaming.jpg";
 import studiesImg from "../asserts/images/group/study.jpg";
@@ -77,7 +77,7 @@ export default function GroupStateProvider() {
     {
       name: "STICKER 3.0",
       desc: "For new Sticker Sharing",
-      img: sticker2Img,
+      img: sticker3Img,
       url: "https://",
     },
     {
@@ -90,12 +90,6 @@ export default function GroupStateProvider() {
       name: "BOT",
       desc: "For Whatsapp Bot Testing",
       img: botImg,
-      url: "https://",
-    },
-    {
-      name: "PHOTOGRAPHERS",
-      desc: "For photography Related Discussion",
-      img: photographyImg,
       url: "https://",
     },
     {
