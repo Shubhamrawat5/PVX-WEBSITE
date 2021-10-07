@@ -9,18 +9,14 @@ import sticker2Img from "../asserts/images/group/sticker2.jpg";
 import animeImg from "../asserts/images/group/anime.jpg";
 import botImg from "../asserts/images/group/bot.jpg";
 import photographyImg from "../asserts/images/group/photography.jpg";
-import crImg from "../asserts/images/group/cr.jpg";
-import cocImg from "../asserts/images/group/coc.jpg";
 import haveliImg from "../asserts/images/group/haveli.jpg";
 import gamingImg from "../asserts/images/group/gaming.jpg";
 import studiesImg from "../asserts/images/group/study.jpg";
 import sportsImg from "../asserts/images/group/sports.jpg";
-import spaceImg from "../asserts/images/group/space.jpg";
 import cryptoImg from "../asserts/images/group/crypto.jpg";
 import autoImg from "../asserts/images/group/auto.jpg";
 import dealsImg from "../asserts/images/group/deals.jpg";
 import pubgmImg from "../asserts/images/group/pubgm.jpg";
-import codmImg from "../asserts/images/group/codm.jpg";
 
 export default function GroupStateProvider() {
   const wagroups = [
@@ -79,6 +75,12 @@ export default function GroupStateProvider() {
       url: "https://",
     },
     {
+      name: "STICKER 3.0",
+      desc: "For new Sticker Sharing",
+      img: sticker2Img,
+      url: "https://",
+    },
+    {
       name: "ANIME",
       desc: "For Anime Related Discussion",
       img: animeImg,
@@ -98,7 +100,7 @@ export default function GroupStateProvider() {
     },
     {
       name: "HAVELI",
-      desc: "For Bang Bang and Spam",
+      desc: "For Spam and all",
       img: haveliImg,
       url: "https://",
     },
@@ -127,32 +129,14 @@ export default function GroupStateProvider() {
       url: "https://",
     },
     {
-      name: "CR",
-      desc: "For Clash Royale Discussion",
-      img: crImg,
-      url: "https://",
-    },
-    {
-      name: "COC",
-      desc: "For Clash of Clans Discussion",
-      img: cocImg,
-      url: "https://",
-    },
-    {
       name: "AUTOMOBILE",
       desc: "For Cars Bikes Discussion",
       img: autoImg,
       url: "https://",
     },
     {
-      name: "SPACE",
-      desc: "For Space Astronomy Discussion",
-      img: spaceImg,
-      url: "https://",
-    },
-    {
-      name: "PUBGM",
-      desc: "For Pubg Mobile Discussion",
+      name: "BGMI",
+      desc: "For BGMI Mobile Discussion",
       img: pubgmImg,
       url: "https://",
     },
@@ -160,12 +144,6 @@ export default function GroupStateProvider() {
       name: "DEALS",
       desc: "For Loots & Deals Info",
       img: dealsImg,
-      url: "https://",
-    },
-    {
-      name: "CODM",
-      desc: "For Call of Duty Mobile Discussion",
-      img: codmImg,
       url: "https://",
     },
   ];
