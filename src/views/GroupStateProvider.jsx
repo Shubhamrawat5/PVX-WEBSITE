@@ -1,3 +1,4 @@
+import stickerOnlyImg from "../asserts/images/group/stickeronly.jpg";
 import communityImg from "../asserts/images/group/main.jpg";
 import techImg from "../asserts/images/group/tech.jpg";
 import progImg from "../asserts/images/group/prog.jpg";
@@ -16,10 +17,16 @@ import sportsImg from "../asserts/images/group/sports.jpg";
 import cryptoImg from "../asserts/images/group/crypto.jpg";
 import autoImg from "../asserts/images/group/auto.jpg";
 import dealsImg from "../asserts/images/group/deals.jpg";
-import pubgmImg from "../asserts/images/group/pubgm.jpg";
+// import pubgmImg from "../asserts/images/group/pubgm.jpg";
 
 export default function GroupStateProvider() {
   const wagroups = [
+    {
+      name: "STICKER ONLY",
+      desc: "Sticker all time, closed chat",
+      img: stickerOnlyImg,
+      url: "https://",
+    },
     {
       name: "COMMUNITY",
       desc: "Main Group, For all Discussion",
@@ -128,12 +135,12 @@ export default function GroupStateProvider() {
       img: autoImg,
       url: "https://",
     },
-    {
-      name: "BGMI",
-      desc: "For BGMI Mobile Discussion",
-      img: pubgmImg,
-      url: "https://",
-    },
+    // {
+    //   name: "BGMI",
+    //   desc: "For BGMI Mobile Discussion",
+    //   img: pubgmImg,
+    //   url: "https://",
+    // },
     {
       name: "DEALS",
       desc: "For Loots & Deals Info",
