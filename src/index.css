@@ -261,11 +261,13 @@ a {
   max-width: 460px;
   filter: brightness(1.5);
 }
+.donation-text,
 .drive-text {
   width: 50%;
   max-width: 500px;
   padding: 0 20px;
 }
+.donation-text a,
 .drive-text a {
   color: blue;
 }
@@ -276,11 +278,29 @@ a {
   .drive-img {
     width: 100%;
   }
+  .donation-text,
   .drive-text {
     width: 100%;
     max-width: 460px;
     padding: 0;
   }
+}
+
+/*=========== DONATION SECTION ===========*/
+
+.qr-img {
+  height: 250px;
+  width: 250px;
+}
+
+.donation-text {
+  max-width: 800px;
+}
+
+.step {
+  margin-top: 8px !important;
+  line-height: 1.5;
+  padding-top: 8px;
 }
 
 /*=========== ACHIEVE SECTION ===========*/
@@ -370,6 +390,8 @@ footer {
   .drive-img {
     width: 100%;
   }
+
+  .donation-text,
   .drive-text {
     margin: 25px 15px;
   }
