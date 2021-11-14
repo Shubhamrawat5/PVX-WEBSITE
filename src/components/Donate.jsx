@@ -23,7 +23,7 @@ export default function Others() {
             <br />
           </span>
           <span className="step">
-            2) Take a screenshot and send it to us
+            2) Take a screenshot and send it to us&nbsp;
             <a
               href="https://wa.me/919557666582"
               target="_blank"
@@ -31,7 +31,7 @@ export default function Others() {
             >
               here
             </a>
-            with your name.
+            &nbsp;with your name.
             <br />
           </span>
           <span className="step">
