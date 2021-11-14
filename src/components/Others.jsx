@@ -1,6 +1,6 @@
 import React from "react";
 import unreadImg from "../asserts/images/pvx/unread.jpg";
-import certiImg from "../asserts/images/pvx/certi.jpg";
+// import certiImg from "../asserts/images/pvx/certi.jpg";
 import medal1Img from "../asserts/images/medal.png";
 import medal2Img from "../asserts/images/medal 2.png";
 import medal3Img from "../asserts/images/medal 3.png";
@@ -18,10 +18,11 @@ export default function Others() {
           </p>
         </div>
 
-        <div data-aos="zoom-in" className="achieve-box donation">
+        {/* <div data-aos="zoom-in" className="achieve-box donation">
           <img loading="lazy" src={certiImg} alt="certificate" />
           <p>Donations collected by PVX in Feb 2020</p>
-        </div>
+        </div> */}
+
         <div data-aos="zoom-in" className="achieve-box tournament">
           <div className="winners">
             <div className="winners-2">
