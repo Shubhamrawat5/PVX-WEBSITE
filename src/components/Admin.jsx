@@ -11,6 +11,7 @@ import kiraImg from "../asserts/images/admin/kira.jpg";
 import ankitImg from "../asserts/images/admin/toxic.jpg";
 import mysImg from "../asserts/images/admin/mys.jpg";
 import vivekImg from "../asserts/images/admin/leo.jpg";
+import karmaImg from "../asserts/images/admin/karma.jpg";
 
 export default function Admin() {
   let admins = [
@@ -53,6 +54,10 @@ export default function Admin() {
     {
       name: "ANKIT",
       img: ankitImg,
+    },
+    {
+      name: "K Λ Я M Λ",
+      img: karmaImg,
     },
     {
       name: "MYSTIXXZ",
