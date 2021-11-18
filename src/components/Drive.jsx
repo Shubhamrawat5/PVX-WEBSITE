@@ -9,8 +9,8 @@ export default function Drive() {
         Access all Movies, Series, Anime, Courses, PC Games, Softwares in one
         place!
       </p>
-      <div data-aos="zoom-in" className="drive-container">
-        <img loading="lazy" className="drive-img" src={driveImg} alt="drive" />
+      <div className="drive-container">
+        <img className="drive-img" src={driveImg} alt="drive" />
         <p className="drive-text">
           Join PVX Shared Drive
           <br />

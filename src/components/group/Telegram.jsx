@@ -14,8 +14,8 @@ export default function Telegram() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <div data-aos="fade" className="card">
-            <img loading="lazy" className="group-dp" src={tgpvxImg} alt="" />
+          <div  className="card">
+            <img className="group-dp" src={tgpvxImg} alt="" />
             <h4 className="group-name">PVX COMMUNITY</h4>
             <p className="group-info">(Group Chat)</p>
           </div>
@@ -26,8 +26,8 @@ export default function Telegram() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <div data-aos="fade" className="card">
-            <img loading="lazy" className="group-dp" src={techImg} alt="" />
+          <div  className="card">
+            <img className="group-dp" src={techImg} alt="" />
             <h4 className="group-name">TECH NEWS</h4>
             <p className="group-info">(For Daily Tech News)</p>
           </div>
@@ -38,8 +38,8 @@ export default function Telegram() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <div data-aos="fade" className="card">
-            <img loading="lazy" className="group-dp" src={moviesImg} alt="" />
+          <div  className="card">
+            <img className="group-dp" src={moviesImg} alt="" />
             <h4 className="group-name">MOVIES</h4>
             <p className="group-info">(For any Movies & Series)</p>
           </div>
@@ -50,8 +50,8 @@ export default function Telegram() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <div data-aos="fade" className="card">
-            <img loading="lazy" className="group-dp" src={mirrorImg} alt="" />
+          <div  className="card">
+            <img className="group-dp" src={mirrorImg} alt="" />
             <h4 className="group-name">MIRROR</h4>
             <p className="group-info">(For Copying Files to Gdrive)</p>
           </div>

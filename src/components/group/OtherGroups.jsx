@@ -13,8 +13,8 @@ export default function OtherGroups() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <div data-aos="fade" className="card">
-              <img loading="lazy" className="group-dp" src={fbImg} alt="" />
+            <div  className="card">
+              <img className="group-dp" src={fbImg} alt="" />
               <h4 className="group-name">PVX COMMUNITY</h4>
               <p className="group-info">(Posting group)</p>
             </div>
@@ -30,13 +30,8 @@ export default function OtherGroups() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <div data-aos="fade" className="card">
-              <img
-                loading="lazy"
-                className="group-dp"
-                src={discordImg}
-                alt=""
-              />
+            <div  className="card">
+              <img className="group-dp" src={discordImg} alt="" />
               <h4 className="group-name">PVX COMMUNITY</h4>
               <p className="group-info">(Discord PVX group)</p>
             </div>
@@ -52,13 +47,8 @@ export default function OtherGroups() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <div data-aos="fade" className="card">
-              <img
-                loading="lazy"
-                className="group-dp"
-                src={communityImg}
-                alt=""
-              />
+            <div  className="card">
+              <img className="group-dp" src={communityImg} alt="" />
               <h4 className="group-name">PVX COMMUNITY</h4>
               <p className="group-info">(Signal PVX group)</p>
             </div>

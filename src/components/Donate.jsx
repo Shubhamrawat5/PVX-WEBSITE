@@ -15,7 +15,7 @@ export default function Others() {
         <em>Any amount is appreciated</em>
       </p>
 
-      <div data-aos="zoom-in" className="drive-container">
+      <div className="drive-container">
         <p className="donation-text">
           <span className="step">
             1) Scan the given qr code or donate at shubhamraw123@okhdfcbank this
@@ -41,7 +41,7 @@ export default function Others() {
           <br />
         </p>
 
-        <img loading="lazy" className="qr-img" src={qrImg} alt="pvx-qr" />
+        <img className="qr-img" src={qrImg} alt="pvx-qr" />
       </div>
 
       <br />
@@ -51,8 +51,8 @@ export default function Others() {
         bots and much more ❤️
       </p>
 
-      <div data-aos="zoom-in" className="achieve-box donation">
-        <img loading="lazy" src={certiImg} alt="certificate" />
+      <div className="achieve-box donation">
+        <img src={certiImg} alt="certificate" />
         <p>Donations collected by PVX in Feb 2020</p>
       </div>
     </section>

@@ -20,14 +20,14 @@ export default function Whatsapp(props) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <div data-aos="fade" className="card">
+              <div className="card">
                 <img className="group-dp" src={group.img} alt="" />
                 <h4 className="group-name">{group.name}</h4>
                 <p className="group-info">&#40;{group.desc}&#41;</p>
               </div>
             </a>
           ) : (
-            <div data-aos="fade" className="card" key={index}>
+            <div className="card" key={index}>
               <img className="group-dp" src={group.img} alt="" />
               <h4 className="group-name">{group.name}</h4>
               <p className="group-info">&#40;{group.desc}&#41;</p>

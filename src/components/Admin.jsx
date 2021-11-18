@@ -70,13 +70,8 @@ export default function Admin() {
       <div className="group-container">
         {admins.map((admin, index) => {
           return (
-            <div data-aos="fade" className="admin-box" key={index}>
-              <img
-                loading="lazy"
-                className="admin-dp"
-                src={admin.img}
-                alt="admin"
-              />
+            <div className="admin-box" key={index}>
+              <img className="admin-dp" src={admin.img} alt="admin" />
               <h4 className="admin-name">{admin.name}</h4>
             </div>
           );
