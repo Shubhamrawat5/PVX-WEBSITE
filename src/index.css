@@ -261,6 +261,8 @@ a {
   max-width: 460px;
   filter: brightness(1.5);
 }
+
+/*=========== DONATION SECTION ===========*/
 .donation-text,
 .drive-text {
   width: 50%;
@@ -271,6 +273,51 @@ a {
 .drive-text a {
   color: blue;
 }
+.donators-subheading {
+  margin: 50px 0 0 0;
+  font-weight: 500;
+}
+.donators-subheading span:first-child {
+  text-decoration: underline;
+  margin-right: 10px;
+}
+.donators-table {
+  margin: 25px auto;
+  text-align: left;
+  text-transform: capitalize;
+  border-collapse: collapse;
+}
+.donators-table tr {
+  border-bottom: solid 1px #ffffff4d;
+}
+.donators-table td {
+  margin: 0 5px;
+  padding: 2px;
+}
+.donator-name {
+  min-width: 700px;
+}
+
+.donator-amount {
+  min-width: 50px;
+}
+
+.qr-img {
+  height: 250px;
+  width: 250px;
+}
+
+.donation-text {
+  max-width: 800px;
+  word-break: break-word;
+}
+
+.step {
+  margin-top: 8px !important;
+  line-height: 1.5;
+  padding-top: 8px;
+}
+
 @media (max-width: 900px) {
   .drive-container {
     flex-direction: column;
@@ -284,23 +331,14 @@ a {
     max-width: 460px;
     padding: 0;
   }
+  .donator-name {
+    min-width: 400px;
+  }
 }
-
-/*=========== DONATION SECTION ===========*/
-
-.qr-img {
-  height: 250px;
-  width: 250px;
-}
-
-.donation-text {
-  max-width: 800px;
-}
-
-.step {
-  margin-top: 8px !important;
-  line-height: 1.5;
-  padding-top: 8px;
+@media (max-width: 600px) {
+  .donator-name {
+    min-width: unset;
+  }
 }
 
 /*=========== ACHIEVE SECTION ===========*/
