@@ -13,6 +13,12 @@ export default function Nav(props) {
           Home
         </li>
         <li
+          className={currentView === "donate" ? "active" : null}
+          onClick={() => setCurrentView("donate")}
+        >
+          Donate
+        </li>
+        <li
           className={currentView === "bdays" ? "active" : null}
           onClick={() => setCurrentView("bdays")}
         >

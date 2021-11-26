@@ -263,6 +263,9 @@ a {
 }
 
 /*=========== DONATION SECTION ===========*/
+.donation-section {
+  padding-top: 80px !important;
+}
 .donation-text,
 .drive-text {
   width: 50%;

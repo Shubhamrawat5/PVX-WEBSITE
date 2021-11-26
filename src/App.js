@@ -17,6 +17,9 @@ function App() {
   const [wagroups, setWagroups] = useState(GroupStateProvider());
   const [months, setMonths] = useState(BdayStateProvider());
 
+  const [donators, setdonators] = useState([]);
+  const [totalDonation, setTotalDonation] = useState(0);
+
   useEffect(() => {
     //everytime current view will change so page will be scrolled to top
     window.scrollTo(0, 0);
@@ -30,10 +33,16 @@ function App() {
           <Header />
           <Group wagroups={wagroups} setWagroups={setWagroups} />
           <Drive />
-          <Donate />
           <Others />
           <Admin />
         </>
+      ) : currentView === "donate" ? (
+        <Donate
+          donators={donators}
+          setdonators={setdonators}
+          totalDonation={totalDonation}
+          setTotalDonation={setTotalDonation}
+        />
       ) : (
         <Community months={months} setMonths={setMonths} />
       )}

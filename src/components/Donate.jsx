@@ -4,15 +4,13 @@ import qrImg from "../asserts/images/pvx_qr.png";
 import { useEffect, useState, useRef } from "react";
 import axios from "axios";
 
-export default function Donate() {
+export default function Donate(props) {
   const isUnmounted = useRef(false);
-  const [donators, setdonators] = useState([]);
-  const [totalDonation, setTotalDonation] = useState(0);
+  const { donators, setdonators, totalDonation, setTotalDonation } = props;
   const [donatorsInfo, setdonatorsInfo] = useState("");
 
   useEffect(() => {
     if (isUnmounted.current) return;
-    //TODO: FIX THIS IF
     if (donators.length !== 0) return; //to avoid reattaching donators
 
     setdonatorsInfo("Adding donator data... please wait.");
@@ -66,7 +64,7 @@ export default function Donate() {
   }, []);
 
   return (
-    <section id="achieve-section" className="section">
+    <section id="achieve-section" className="section donation-section">
       <h2 className="section-heading">DONATE</h2>
 
       <p className="drive-subheading">
