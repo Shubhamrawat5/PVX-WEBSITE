@@ -23,10 +23,8 @@ export default function Nav() {
         {/* <Link to="/about">
           <li className={pathname === "/about" ? "active" : null}>About</li>
         </Link> */}
-        <Link to="/community">
-          <li className={pathname === "/community" ? "active" : null}>
-            B'Days
-          </li>
+        <Link to="/bdays">
+          <li className={pathname === "/bdays" ? "active" : null}>B'Days</li>
         </Link>
       </div>
     </nav>

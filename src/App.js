@@ -31,7 +31,7 @@ function App() {
           <Admin />
           <Footer />
         </Route>
-        <Route exact path="/community">
+        <Route exact path="/bdays">
           <Community months={months} setMonths={setMonths} />
           <Footer />
         </Route>
