@@ -8,43 +8,37 @@ import Admin from "./components/Admin";
 import Footer from "./components/Footer";
 import Community from "./views/Community";
 // import About from "./components/About";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import GroupStateProvider from "./views/GroupStateProvider";
 import BdayStateProvider from "./views/BdayStateProvider";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
+  const [currentView, setCurrentView] = useState("home");
   const [wagroups, setWagroups] = useState(GroupStateProvider());
   const [months, setMonths] = useState(BdayStateProvider());
 
-  return (
-    <Router>
-      <Nav />
+  useEffect(() => {
+    //everytime current view will change so page will be scrolled to top
+    window.scrollTo(0, 0);
+  }, [currentView]);
 
-      <Switch>
-        <Route exact path="/">
+  return (
+    <>
+      <Nav currentView={currentView} setCurrentView={setCurrentView} />
+      {currentView === "home" ? (
+        <>
           <Header />
           <Group wagroups={wagroups} setWagroups={setWagroups} />
           <Drive />
           <Donate />
           <Others />
           <Admin />
-          <Footer />
-        </Route>
-        <Route exact path="/bdays">
-          <Community months={months} setMonths={setMonths} />
-          <Footer />
-        </Route>
-        {/* <Route exact path="/about">
-          <About />
-        </Route> */}
-        <Route>
-          <p style={{ padding: "100px 0 50px 0", color: "black" }}>
-            you're in wrong url.
-          </p>
-        </Route>
-      </Switch>
-    </Router>
+        </>
+      ) : (
+        <Community months={months} setMonths={setMonths} />
+      )}
+      <Footer />
+    </>
   );
 }
 

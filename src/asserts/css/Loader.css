@@ -12,10 +12,10 @@
   text-transform: uppercase;
   animation: stroke 2s infinite alternate;
   stroke-width: 3;
-  stroke: #000000c9;
+  stroke: #ffffffc9;
   letter-spacing: 10px;
   /* opacity is 0 of fill */
-  fill: rgba(72, 138, 20, 0);
+  fill: rgba(182, 187, 178, 0);
 }
 @keyframes stroke {
   0% {
