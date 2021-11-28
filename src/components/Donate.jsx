@@ -121,7 +121,7 @@ export default function Donate(props) {
         <>
           <h2 className="donators-subheading">
             <span>TOTAL DONATIONS:</span>
-            <span>{"₹ " + totalDonation}</span>
+            <span>{"₹ " + totalDonation.toLocaleString("en-IN")}</span>
           </h2>
           <table className="donators-table">
             <tbody>

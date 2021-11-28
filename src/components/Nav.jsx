@@ -17,6 +17,9 @@ export default function Nav(props) {
         <Link to="/">
           <li className={pathname === "/" ? "active" : null}>Home</li>
         </Link>
+        <Link to="/stats">
+          <li className={pathname === "/stats" ? "active" : null}>Stats</li>
+        </Link>
         <Link to="/donate">
           <li className={pathname === "/donate" ? "active" : null}>Donate</li>
         </Link>

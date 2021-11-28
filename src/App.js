@@ -1,6 +1,7 @@
 import Nav from "./components/Nav";
 import Header from "./components/Header";
 import Group from "./views/Group";
+import Stats from "./components/Stats";
 import Drive from "./components/Drive";
 import Donate from "./components/Donate";
 import Others from "./components/Others";
@@ -21,6 +22,9 @@ function App() {
 
   const [donators, setdonators] = useState([]);
   const [totalDonation, setTotalDonation] = useState(0);
+
+  const [gcount, setGcount] = useState([]);
+  const [totalMessages, setTotalMessages] = useState(0);
 
   return (
     <Router>
@@ -49,6 +53,19 @@ function App() {
               setdonators={setdonators}
               totalDonation={totalDonation}
               setTotalDonation={setTotalDonation}
+            />
+          }
+        />
+
+        <Route
+          exact
+          path="/stats"
+          element={
+            <Stats
+              gcount={gcount}
+              setGcount={setGcount}
+              totalMessages={totalMessages}
+              setTotalMessages={setTotalMessages}
             />
           }
         />

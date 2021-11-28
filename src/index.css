@@ -302,7 +302,8 @@ a {
 }
 
 .donator-amount {
-  min-width: 50px;
+  min-width: 54px;
+  text-align: right;
 }
 
 .qr-img {
@@ -339,6 +340,9 @@ a {
   }
 }
 @media (max-width: 600px) {
+  .donators-table {
+    width: 100%;
+  }
   .donator-name {
     min-width: unset;
   }
@@ -529,11 +533,15 @@ footer {
 }
 
 @media (max-width: 380px) {
+  li {
+    margin: 0 0 0 10px;
+  }
+
   #group-section {
     padding: 15px 0px 5px 0px;
   }
   nav {
-    padding: 0px 12px;
+    padding: 0px 10px;
   }
   .card {
     height: 215px;
@@ -566,6 +574,9 @@ footer {
 
 @media (max-width: 310px) {
   .group-nav {
+    display: none;
+  }
+  .nav-logo {
     display: none;
   }
 }
