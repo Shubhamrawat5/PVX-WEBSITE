@@ -10,10 +10,11 @@ import Community from "./views/Community";
 // import About from "./components/About";
 import GroupStateProvider from "./views/GroupStateProvider";
 import BdayStateProvider from "./views/BdayStateProvider";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+
+import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 
 function App() {
-  const [currentView, setCurrentView] = useState("home");
   const [wagroups, setWagroups] = useState(GroupStateProvider());
   const [months, setMonths] = useState(BdayStateProvider());
   const [todayBday, setTodayBday] = useState("");
@@ -21,39 +22,52 @@ function App() {
   const [donators, setdonators] = useState([]);
   const [totalDonation, setTotalDonation] = useState(0);
 
-  useEffect(() => {
-    //everytime current view will change so page will be scrolled to top
-    window.scrollTo(0, 0);
-  }, [currentView]);
-
   return (
-    <>
-      <Nav currentView={currentView} setCurrentView={setCurrentView} />
-      {currentView === "home" ? (
-        <>
-          <Header />
-          <Group wagroups={wagroups} setWagroups={setWagroups} />
-          <Drive />
-          <Others />
-          <Admin />
-        </>
-      ) : currentView === "donate" ? (
-        <Donate
-          donators={donators}
-          setdonators={setdonators}
-          totalDonation={totalDonation}
-          setTotalDonation={setTotalDonation}
+    <Router>
+      <Nav />
+      <Routes>
+        <Route
+          exact
+          path="/"
+          element={
+            <>
+              <Header />
+              <Group wagroups={wagroups} setWagroups={setWagroups} />
+              <Drive />
+              <Others />
+              <Admin />
+            </>
+          }
         />
-      ) : (
-        <Community
-          months={months}
-          setMonths={setMonths}
-          todayBday={todayBday}
-          setTodayBday={setTodayBday}
+
+        <Route
+          exact
+          path="/donate"
+          element={
+            <Donate
+              donators={donators}
+              setdonators={setdonators}
+              totalDonation={totalDonation}
+              setTotalDonation={setTotalDonation}
+            />
+          }
         />
-      )}
+
+        <Route
+          exact
+          path="/bdays"
+          element={
+            <Community
+              months={months}
+              setMonths={setMonths}
+              todayBday={todayBday}
+              setTodayBday={setTodayBday}
+            />
+          }
+        />
+      </Routes>
       <Footer />
-    </>
+    </Router>
   );
 }
 

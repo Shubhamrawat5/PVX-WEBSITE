@@ -1,29 +1,28 @@
 import navLogoImg from "../asserts/images/pvxx.png";
+import { Link, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 export default function Nav(props) {
-  const { currentView, setCurrentView } = props;
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    //everytime url will change so page will be scrolled to top
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <nav>
       <img className="nav-logo" src={navLogoImg} alt="logo" />
       <div className="nav-item-container">
-        <li
-          className={currentView === "home" ? "active" : null}
-          onClick={() => setCurrentView("home")}
-        >
-          Home
-        </li>
-        <li
-          className={currentView === "donate" ? "active" : null}
-          onClick={() => setCurrentView("donate")}
-        >
-          Donate
-        </li>
-        <li
-          className={currentView === "bdays" ? "active" : null}
-          onClick={() => setCurrentView("bdays")}
-        >
-          B'Days
-        </li>
+        <Link to="/">
+          <li className={pathname === "/" ? "active" : null}>Home</li>
+        </Link>
+        <Link to="/donate">
+          <li className={pathname === "/donate" ? "active" : null}>Donate</li>
+        </Link>
+        <Link to="/bdays">
+          <li className={pathname === "/bdays" ? "active" : null}>B'Days</li>
+        </Link>
       </div>
     </nav>
   );
