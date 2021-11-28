@@ -34,7 +34,7 @@ export default function GroupStateProvider() {
       url: "https://",
     },
     {
-      name: "TECH DISCUSSION",
+      name: "TECH DISCUSS",
       desc: "For Tech related Discussion",
       img: techImg,
       url: "https://",

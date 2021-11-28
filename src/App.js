@@ -16,6 +16,7 @@ function App() {
   const [currentView, setCurrentView] = useState("home");
   const [wagroups, setWagroups] = useState(GroupStateProvider());
   const [months, setMonths] = useState(BdayStateProvider());
+  const [todayBday, setTodayBday] = useState("");
 
   const [donators, setdonators] = useState([]);
   const [totalDonation, setTotalDonation] = useState(0);
@@ -44,7 +45,12 @@ function App() {
           setTotalDonation={setTotalDonation}
         />
       ) : (
-        <Community months={months} setMonths={setMonths} />
+        <Community
+          months={months}
+          setMonths={setMonths}
+          todayBday={todayBday}
+          setTodayBday={setTodayBday}
+        />
       )}
       <Footer />
     </>

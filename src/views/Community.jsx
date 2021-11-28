@@ -6,7 +6,7 @@ import Month from "../components/Month";
 
 export default function Community(props) {
   const { months, setMonths } = props;
-  const [todayBday, setTodayBday] = useState("");
+  const { todayBday, setTodayBday } = props;
   const isUnmounted = useRef(false);
 
   // const [didUnMount, setDidUnMount] = useState(false); //to check if component is unmounted or not!

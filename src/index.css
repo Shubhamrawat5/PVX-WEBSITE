@@ -79,30 +79,10 @@ li:hover {
   text-decoration: underline;
 }
 
-.theme-mode-container {
-  background: azure;
-  width: 40px;
-  height: 40px;
-  border-radius: 4px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  display: none;
-}
-
-.theme-mode-container:hover {
-  background: rgb(182 199 199);
-}
-
-.theme-mode {
-  width: 25px;
-}
-
 section {
   padding: 30px 20px 10px 20px;
-  border-top: 0.6px solid #938787;
-  border-top-style: groove;
+  /* border-top: 0.6px solid #938787;
+  border-top-style: groove; */
 }
 #drive-section {
   padding-bottom: 30px;
@@ -127,18 +107,29 @@ header {
   justify-content: center;
   align-items: center;
   /* TODO: fix gif of smaller size */
-  background-image: url("./asserts/images/6.gif");
+  background-image: url("./ex.svg");
   background-position: center;
+  background-size: cover;
 }
 
 #logo {
-  background-image: url(./asserts/images/10.gif);
+  /* background-image: url(./asserts/images/10.gif); */
   background-position: center;
   background-size: 300px;
-  padding: 10px;
+  padding: 3px;
   width: 250px;
   height: 250px;
   border-radius: 50%;
+  border: 4px solid #ffffff44;
+  animation: border-anim;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 1.5s;
+}
+@keyframes border-anim {
+  100% {
+    border: 4px solid rgba(255, 255, 255, 0.74);
+  }
 }
 
 #edit-icon {
@@ -166,7 +157,7 @@ a {
 #admin-section,
 #drive-section,
 #achieve-section {
-  background-image: url("./asserts/images/26.gif");
+  /* background-image: url("./asserts/images/26.gif"); */
   background-position: center;
 }
 
@@ -197,8 +188,12 @@ a {
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   margin: 20px;
-  padding: 20px 10px 15px 10px;
+  padding: 10px;
   background-color: #231e1f;
   background-color: #8b00001e;
   height: 255px;
@@ -208,16 +203,13 @@ a {
 }
 .card,
 .admin-box {
-  border: 2px solid darkred;
-  /* box-shadow: 1px 1px 5px -4px #e02e19; */
-  /* border: 2px solid #382f35; */
-  border: 2px solid #c0c3c6;
-  background-color: #55475073;
+  box-shadow: 2px 2px 5px -1px #000000;
+  background-color: #131618;
 }
 
 .card:hover {
-  transform: scale(1.03);
-  transition: 0.2s;
+  box-shadow: 0px 0px 4px 0px white;
+  transition: 0.1s;
 }
 
 .group-container {
@@ -233,11 +225,18 @@ a {
   border-radius: 50%;
 }
 
-.group-name,
+.group-name {
+  font-weight: 400;
+  margin: 0px;
+  border-bottom: 1px solid #ffffff5c;
+  padding-bottom: 5px;
+  width: 100%;
+}
 .admin-name {
   font-weight: 400;
-  margin: 10px;
-  margin: 10px 0;
+  padding-bottom: 5px;
+  margin: 0px;
+  font-size: 15px;
 }
 
 .group-info {
@@ -246,6 +245,7 @@ a {
   font-size: 14px;
   margin: 0;
   color: #ffffffb5;
+  height: 34px;
 }
 
 /*============ DRIVE SECTION ============*/
@@ -399,10 +399,10 @@ a {
   box-shadow: 6px 6px 10px -3px #101010;
 }
 
-.admin-box:hover {
+/* .admin-box:hover {
   transform: scale(1.03);
   transition: 0.2s;
-}
+} */
 
 .admin-dp {
   width: 80px;
@@ -511,7 +511,7 @@ footer {
   }
   .card {
     height: 220px;
-    padding: 20px 5px 15px;
+    /* padding: 20px 5px 15px; */
     width: 150px;
     margin: 15px 10px;
   }
@@ -571,8 +571,8 @@ footer {
 }
 
 .section:nth-child(2n) {
-  background-color: #0c151a;
+  background-color: #070b0e;
 }
 .section:nth-child(2n + 1) {
-  background-color: #221d1e;
+  background-color: #160101;
 }

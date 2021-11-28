@@ -14,9 +14,9 @@ export default function Telegram() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <div  className="card">
+          <div className="card">
+            <h4 className="group-name">COMMUNITY</h4>
             <img className="group-dp" src={tgpvxImg} alt="" />
-            <h4 className="group-name">PVX COMMUNITY</h4>
             <p className="group-info">(Group Chat)</p>
           </div>
         </a>
@@ -26,9 +26,9 @@ export default function Telegram() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <div  className="card">
-            <img className="group-dp" src={techImg} alt="" />
+          <div className="card">
             <h4 className="group-name">TECH NEWS</h4>
+            <img className="group-dp" src={techImg} alt="" />
             <p className="group-info">(For Daily Tech News)</p>
           </div>
         </a>
@@ -38,9 +38,9 @@ export default function Telegram() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <div  className="card">
-            <img className="group-dp" src={moviesImg} alt="" />
+          <div className="card">
             <h4 className="group-name">MOVIES</h4>
+            <img className="group-dp" src={moviesImg} alt="" />
             <p className="group-info">(For any Movies & Series)</p>
           </div>
         </a>
@@ -50,9 +50,9 @@ export default function Telegram() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <div  className="card">
-            <img className="group-dp" src={mirrorImg} alt="" />
+          <div className="card">
             <h4 className="group-name">MIRROR</h4>
+            <img className="group-dp" src={mirrorImg} alt="" />
             <p className="group-info">(For Copying Files to Gdrive)</p>
           </div>
         </a>
