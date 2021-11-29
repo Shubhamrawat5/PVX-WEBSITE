@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Russo+One");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 30px;
@@ -31,7 +38,49 @@ footer {
   }
 }
 
-/*================== NAV BAR ====================*/
+section {
+  padding: 30px 20px 10px 20px;
+  /* border-top: 0.6px solid #938787;
+  border-top-style: groove; */
+}
+.subheading-p {
+  font-family: "Mukta", sans-serif;
+  color: #c8dedf;
+  letter-spacing: 0.8px;
+}
+#drive-section {
+  padding-bottom: 30px;
+}
+.err {
+  border: 1px solid white;
+  padding: 3px 8px;
+  margin-bottom: 25px;
+  font-family: monospace;
+  font-size: 14px;
+  width: 100%;
+}
+a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+.section:nth-child(2n) {
+  background-color: #070b0e;
+}
+.section:nth-child(2n + 1) {
+  background-color: #160101;
+}
+#admin-section,
+#drive-section {
+  /* background-image: url("./asserts/images/26.gif"); */
+  background-position: center;
+}
+#group-section,
+#achieve-section {
+  background-image: url("./ex.svg");
+}
+
+/* --------------------------------- NAV BAR -------------------------------- */
 nav {
   display: inline-flex;
   width: 100%;
@@ -64,39 +113,22 @@ nav {
   transition: 1s;
 }
 
-li {
+nav li {
   display: inline;
   cursor: pointer;
   margin-left: 18px;
   font-size: 18px;
 }
 
-li:hover {
+nav li:hover {
   color: #e5dede;
 }
 
-.active {
+nav .active {
   text-decoration: underline;
 }
 
-section {
-  padding: 30px 20px 10px 20px;
-  /* border-top: 0.6px solid #938787;
-  border-top-style: groove; */
-}
-#drive-section {
-  padding-bottom: 30px;
-}
-.err {
-  border: 1px solid white;
-  padding: 3px 8px;
-  margin-bottom: 25px;
-  font-family: monospace;
-  font-size: 14px;
-  width: 100%;
-}
-
-/*================== HEADER ====================*/
+/* --------------------------------- HEADER --------------------------------- */
 header {
   width: 100%;
   height: 100vh;
@@ -106,14 +138,12 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* TODO: fix gif of smaller size */
-  background-image: url("./ex.svg");
+  background-image: url("./ex2.svg");
   background-position: center;
   background-size: cover;
 }
 
 #logo {
-  /* background-image: url(./asserts/images/10.gif); */
   background-position: center;
   background-size: 300px;
   padding: 3px;
@@ -136,31 +166,19 @@ header {
   display: none;
   width: 30px;
 }
-a {
-  text-decoration: none;
-  color: white;
-  cursor: pointer;
-}
-.heading {
+
+header .heading {
   font-size: 40px;
   font-weight: 400;
   margin-bottom: 0;
 }
 
-#header-section p {
+header .subheading {
   font-weight: 200;
   font-size: 18px;
 }
 
-/*================= GROUP SECTION ==================*/
-#group-section,
-#admin-section,
-#drive-section,
-#achieve-section {
-  /* background-image: url("./asserts/images/26.gif"); */
-  background-position: center;
-}
-
+/* ------------------------------ GROUP SECTION ----------------------------- */
 .groups {
   display: inline-block;
 }
@@ -169,7 +187,12 @@ a {
   font-weight: 500;
   font-size: 30px;
   margin: 0 10px 36px 10px;
-  text-decoration: underline;
+  background: #24364200;
+  color: #ffffffe0;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px -2px #f5f5f5;
+  padding: 4px 15px;
+  display: inline-block;
 }
 
 .app-heading {
@@ -209,7 +232,7 @@ a {
 
 .card:hover {
   box-shadow: 0px 0px 4px 0px white;
-  transition: 0.1s;
+  transition: 0s;
 }
 
 .group-container {
@@ -241,14 +264,16 @@ a {
 
 .group-info {
   font-family: "Inter", sans-serif;
-  font-weight: 500;
+  font-family: "Mukta", sans-serif;
   font-size: 14px;
   margin: 0;
-  color: #ffffffb5;
-  height: 34px;
+  color: #ffffffc7;
+  height: 38px;
+  letter-spacing: 0.8px;
+  line-height: 20px;
 }
 
-/*============ DRIVE SECTION ============*/
+/* ------------------------------ DRIVE SECTION ----------------------------- */
 .drive-container {
   display: inline-flex;
   justify-content: center;
@@ -262,10 +287,6 @@ a {
   filter: brightness(1.5);
 }
 
-/*=========== DONATION SECTION ===========*/
-.donation-section {
-  padding-top: 80px !important;
-}
 .donation-text,
 .drive-text {
   width: 50%;
@@ -274,8 +295,14 @@ a {
 }
 .donation-text a,
 .drive-text a {
-  color: blue;
+  color: #007eff;
 }
+
+/* ---------------------------- DONATION SECTION ---------------------------- */
+.donation-section {
+  padding-top: 80px !important;
+}
+
 .donators-subheading {
   margin: 50px 0 0 0;
   font-weight: 500;
@@ -296,9 +323,10 @@ a {
 .donators-table td {
   margin: 0 5px;
   padding: 2px;
+  font-family: "Mukta", sans-serif;
 }
 .donator-name {
-  min-width: 700px;
+  min-width: 600px;
 }
 
 .donator-amount {
@@ -322,39 +350,13 @@ a {
   padding-top: 8px;
 }
 
-@media (max-width: 900px) {
-  .drive-container {
-    flex-direction: column;
-  }
-  .drive-img {
-    width: 100%;
-  }
-  .donation-text,
-  .drive-text {
-    width: 100%;
-    max-width: 460px;
-    padding: 0;
-  }
-  .donator-name {
-    min-width: 400px;
-  }
-}
-@media (max-width: 600px) {
-  .donators-table {
-    width: 100%;
-  }
-  .donator-name {
-    min-width: unset;
-  }
-}
-
-/*=========== ACHIEVE SECTION ===========*/
+/* ----------------------------- ACHIEVE SECTION ---------------------------- */
 #achieve-section {
   width: 100%;
 }
 
 .achieve-container {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
 }
@@ -394,7 +396,7 @@ a {
   transform: translateY(50px);
 }
 
-/*======== ADMIN SECTION =======*/
+/* ------------------------------ ADMIN SECTION ----------------------------- */
 .admin-box {
   margin: 5px;
   padding: 10px;
@@ -403,17 +405,13 @@ a {
   box-shadow: 6px 6px 10px -3px #101010;
 }
 
-/* .admin-box:hover {
-  transform: scale(1.03);
-  transition: 0.2s;
-} */
-
 .admin-dp {
   width: 80px;
   height: 82px;
   border-radius: 50%;
 }
 
+/* --------------------------------- FOOTER --------------------------------- */
 footer {
   padding: 18px 0 14px 0;
   background: #000000 !important;
@@ -423,7 +421,11 @@ footer {
   display: none;
 }
 
-/*=============== MEDIA QUERY: 700PX ================*/
+.dev-name a {
+  color: #007eff;
+}
+
+/* --------------------------- MEDIA QUERY: 700PX --------------------------- */
 @media (max-width: 700px) {
   .section {
     padding: 15px 15px 5px 15px;
@@ -450,9 +452,6 @@ footer {
     margin: 15px;
     width: 200px;
   }
-  .group-info {
-    margin-top: 10px;
-  }
   .admin-box {
     padding: 9px 9px 0 9px;
   }
@@ -463,10 +462,31 @@ footer {
   .admin-name {
     font-size: 14px;
   }
+  .drive-container {
+    flex-direction: column;
+  }
+  .drive-img {
+    width: 100%;
+  }
+  .donation-text,
+  .drive-text {
+    width: 100%;
+    max-width: 460px;
+    padding: 0;
+  }
+  .donator-name {
+    min-width: 400px;
+  }
 }
 
-/*=============== MEDIA QUERY: 500PX ================*/
+/* --------------------------- MEDIA QUERY: 500PX --------------------------- */
 @media (max-width: 500px) {
+  .donators-table {
+    width: 100%;
+  }
+  .donator-name {
+    min-width: unset;
+  }
   .err {
     font-size: 12px;
   }
@@ -485,8 +505,6 @@ footer {
     width: 160px;
     height: 160px;
     background-size: 182px;
-    /* border: 3px solid white; */
-    /* padding: 3px; */
   }
   .tournament {
     width: 100%;
@@ -506,7 +524,6 @@ footer {
     height: 105px;
   }
   .group-info {
-    margin-top: 10px;
     font-size: 12px;
   }
   .group-name,
@@ -515,7 +532,6 @@ footer {
   }
   .card {
     height: 220px;
-    /* padding: 20px 5px 15px; */
     width: 150px;
     margin: 15px 10px;
   }
@@ -532,6 +548,7 @@ footer {
   }
 }
 
+/* --------------------------- MEDIA QUERY: 380PX --------------------------- */
 @media (max-width: 380px) {
   li {
     margin: 0 0 0 10px;
@@ -572,6 +589,7 @@ footer {
   }
 }
 
+/* --------------------------- MEDIA QUERY: 310PX --------------------------- */
 @media (max-width: 310px) {
   .group-nav {
     display: none;
@@ -579,11 +597,4 @@ footer {
   .nav-logo {
     display: none;
   }
-}
-
-.section:nth-child(2n) {
-  background-color: #070b0e;
-}
-.section:nth-child(2n + 1) {
-  background-color: #160101;
 }

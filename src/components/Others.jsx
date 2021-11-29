@@ -12,7 +12,7 @@ export default function Others() {
       <div className="achieve-container">
         <div className="achieve-box unread">
           <img src={unreadImg} alt="unread" />
-          <p>
+          <p className="subheading-p">
             Yes it is real! Unread message over some years. <br /> Credits:
             Hritik Jain
           </p>
@@ -38,7 +38,7 @@ export default function Others() {
               <p>Sweeton</p>
             </div>
           </div>
-          <p className="chess-heading">PVX CHESS TOURNAMENT (12/08/21)</p>
+          <p className="subheading-p">PVX CHESS TOURNAMENT (12/08/21)</p>
         </div>
       </div>
     </section>

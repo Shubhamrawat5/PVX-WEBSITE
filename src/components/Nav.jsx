@@ -12,7 +12,9 @@ export default function Nav(props) {
 
   return (
     <nav>
-      <img className="nav-logo" src={navLogoImg} alt="logo" />
+      <Link to="/">
+        <img className="nav-logo" src={navLogoImg} alt="logo" />
+      </Link>
       <div className="nav-item-container">
         <Link to="/">
           <li className={pathname === "/" ? "active" : null}>Home</li>

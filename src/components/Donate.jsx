@@ -67,7 +67,7 @@ export default function Donate(props) {
     <section id="achieve-section" className="section donation-section">
       <h2 className="section-heading">DONATE</h2>
 
-      <p className="drive-subheading">
+      <p className="subheading-p">
         Help PVX COMMUNITY to grow and provide good stuff for all members.
       </p>
 
@@ -76,7 +76,7 @@ export default function Donate(props) {
       </p>
 
       <div className="drive-container">
-        <p className="donation-text">
+        <p className="donation-text subheading-p">
           <span className="step">
             1) Scan the given qr code or donate at "shubhamraw123@okhdfcbank"
             this VPA using your favourite payments app.
@@ -106,7 +106,7 @@ export default function Donate(props) {
 
       <br />
 
-      <p className="drive-subheading">
+      <p className="subheading-p">
         Donations are ✅ transparently used to build tools, 🌐 buy domain, 🤖
         bots and much more ❤️
       </p>
@@ -138,7 +138,7 @@ export default function Donate(props) {
 
       <div className="achieve-box donation">
         <img src={certiImg} alt="certificate" />
-        <p>Donations collected by PVX in Feb 2020</p>
+        <p className="subheading-p">Donations collected by PVX in Feb 2020</p>
       </div>
     </section>
   );

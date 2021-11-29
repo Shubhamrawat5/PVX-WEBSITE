@@ -5,13 +5,13 @@ export default function Drive() {
   return (
     <section id="drive-section" className="section">
       <h2 className="section-heading">PVX SHARED DRIVE</h2>
-      <p className="drive-subheading">
+      <p className="subheading-p">
         Access all Movies, Series, Anime, Courses, PC Games, Softwares in one
         place!
       </p>
       <div className="drive-container">
         <img className="drive-img" src={driveImg} alt="drive" />
-        <p className="drive-text">
+        <p className="drive-text subheading-p">
           Join PVX Shared Drive
           <br />
           <a

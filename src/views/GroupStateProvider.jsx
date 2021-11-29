@@ -10,23 +10,17 @@ import sticker2Img from "../asserts/images/group/sticker2.jpg";
 import sticker3Img from "../asserts/images/group/sticker3.jpg";
 import animeImg from "../asserts/images/group/anime.jpg";
 import botImg from "../asserts/images/group/bot.jpg";
-import haveliImg from "../asserts/images/group/haveli.jpg";
+// import haveliImg from "../asserts/images/group/haveli.jpg";
 import gamingImg from "../asserts/images/group/gaming.jpg";
 import studiesImg from "../asserts/images/group/study.jpg";
 import sportsImg from "../asserts/images/group/sports.jpg";
 import cryptoImg from "../asserts/images/group/crypto.jpg";
 import autoImg from "../asserts/images/group/auto.jpg";
 import dealsImg from "../asserts/images/group/deals.jpg";
-// import pubgmImg from "../asserts/images/group/pubgm.jpg";
+import pubgmImg from "../asserts/images/group/pubgm.jpg";
 
 export default function GroupStateProvider() {
   const wagroups = [
-    {
-      name: "STICKER ONLY",
-      desc: "Sticker all time, closed chat",
-      img: stickerOnlyImg,
-      url: "https://",
-    },
     {
       name: "COMMUNITY",
       desc: "Main Group, For all Discussion",
@@ -70,6 +64,12 @@ export default function GroupStateProvider() {
       url: "https://",
     },
     {
+      name: "STICKER ONLY",
+      desc: "Sticker all time, closed chat",
+      img: stickerOnlyImg,
+      url: "https://",
+    },
+    {
       name: "STICKER 1.0",
       desc: "For new Sticker Sharing",
       img: sticker1Img,
@@ -94,17 +94,23 @@ export default function GroupStateProvider() {
       url: "https://",
     },
     {
+      name: "CRYPTO",
+      desc: "For Crypto Related Discussion",
+      img: cryptoImg,
+      url: "https://",
+    },
+    {
       name: "BOT",
       desc: "For Whatsapp Bot Testing",
       img: botImg,
       url: "https://",
     },
-    {
-      name: "HAVELI",
-      desc: "For Spam and all",
-      img: haveliImg,
-      url: "https://",
-    },
+    // {
+    //   name: "HAVELI",
+    //   desc: "For Spam and all",
+    //   img: haveliImg,
+    //   url: "https://",
+    // },
     {
       name: "GAMING",
       desc: "For Gaming Discussion",
@@ -124,23 +130,17 @@ export default function GroupStateProvider() {
       url: "https://",
     },
     {
-      name: "CRYPTO",
-      desc: "For Crypto Related Discussion",
-      img: cryptoImg,
-      url: "https://",
-    },
-    {
       name: "AUTOMOBILE",
       desc: "For Cars Bikes Discussion",
       img: autoImg,
       url: "https://",
     },
-    // {
-    //   name: "BGMI",
-    //   desc: "For BGMI Mobile Discussion",
-    //   img: pubgmImg,
-    //   url: "https://",
-    // },
+    {
+      name: "BGMI",
+      desc: "For BGMI Mobile Discussion",
+      img: pubgmImg,
+      url: "https://",
+    },
     {
       name: "DEALS",
       desc: "For Loots & Deals Info",

@@ -8,7 +8,7 @@ export default function Header() {
       <div id="header-section">
         <img id="logo" src={logoImg} alt="logo" />
         <h1 className="heading">&lt;&#123;PVX&#125;&gt; COMMUNITY ❤️</h1>
-        <p>Created by You, 03/07/16</p>
+        <p className="subheading">Created by You, 03/07/16</p>
         <img id="edit-icon" src={editImg} alt="edit" />
       </div>
     </header>
