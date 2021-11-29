@@ -19,6 +19,7 @@ export default function Whatsapp(props) {
               key={index}
               target="_blank"
               rel="noopener noreferrer"
+              className={group.name}
             >
               <div className="card">
                 <h4 className="group-name">{group.name}</h4>

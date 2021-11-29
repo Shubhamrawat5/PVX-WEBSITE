@@ -12,6 +12,7 @@ export default function OtherGroups() {
             href="https://facebook.com/groups/pvxgaming/"
             target="_blank"
             rel="noopener noreferrer"
+            className="fb-community"
           >
             <div className="card">
               <h4 className="group-name">COMMUNITY</h4>
@@ -29,6 +30,7 @@ export default function OtherGroups() {
             href="https://discord.gg/zMktzNzx9U"
             target="_blank"
             rel="noopener noreferrer"
+            className="discord-community"
           >
             <div className="card">
               <h4 className="group-name">COMMUNITY</h4>
@@ -46,6 +48,7 @@ export default function OtherGroups() {
             href="https://signal.group/#CjQKIFt19XJr-7owvEs8F0otjk5TujIroVnPsqQB-QV8dQXCEhDbIbTkPzfIpDek1Xhoxk53"
             target="_blank"
             rel="noopener noreferrer"
+            className="signal-community"
           >
             <div className="card">
               <h4 className="group-name">COMMUNITY</h4>

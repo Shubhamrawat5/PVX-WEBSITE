@@ -13,6 +13,7 @@ export default function Telegram() {
           href="https://t.me/PVX_Community_Group"
           target="_blank"
           rel="noopener noreferrer"
+          className="tg-community"
         >
           <div className="card">
             <h4 className="group-name">COMMUNITY</h4>
@@ -25,6 +26,7 @@ export default function Telegram() {
           href="https://t.me/pvxtechnews"
           target="_blank"
           rel="noopener noreferrer"
+          className="tg-technews"
         >
           <div className="card">
             <h4 className="group-name">TECH NEWS</h4>
@@ -37,6 +39,7 @@ export default function Telegram() {
           href="https://t.me/joinchat/J7FzKB1uYt0xNDVl"
           target="_blank"
           rel="noopener noreferrer"
+          className="tg-movies"
         >
           <div className="card">
             <h4 className="group-name">MOVIES</h4>
@@ -49,6 +52,7 @@ export default function Telegram() {
           href="https://t.me/PVXMIRROR"
           target="_blank"
           rel="noopener noreferrer"
+          className="tg-mirror"
         >
           <div className="card">
             <h4 className="group-name">MIRROR</h4>
